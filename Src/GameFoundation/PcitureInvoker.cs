@@ -95,7 +95,7 @@ namespace GameFoundation
     private const int managerList = 512;
     private const int nextManager = 1024;
 
-    [SpecialName]
+    //[SpecialName]
     internal static PcitureInvoker.ClientTable get_DisconnectProject()
     {
       PcitureInvoker.ClientTable clientTable = (PcitureInvoker.ClientTable) ReferenceInvoker.DisconnectProject(2561);
@@ -103,19 +103,12 @@ namespace GameFoundation
       PcitureInvoker.ClientTable disconnectProject;
       if (num != ReferenceInvoker.DisconnectProject(2569))
       {
-label_1:
-        switch (1)
         {
-          case 0:
-            goto label_1;
-          default:
-            if (false)
-            {
-              // ISSUE: method reference
-              RuntimeMethodHandle runtimeMethodHandle = __methodref (PcitureInvoker.get_DisconnectProject);
-            }
+          
+            
+              //this.get_DisconnectProject();
+            
             disconnectProject = num != ReferenceInvoker.DisconnectProject(2573) ? (PcitureInvoker.ClientTable) ReferenceInvoker.DisconnectProject(2585) : (PcitureInvoker.ClientTable) ReferenceInvoker.DisconnectProject(2577);
-            break;
         }
       }
       else
@@ -123,7 +116,7 @@ label_1:
       return disconnectProject;
     }
 
-    [SpecialName]
+    //[SpecialName]
     internal static PcitureInvoker.ClientTable get_DisposeDrive()
     {
       PcitureInvoker.ClientTable clientTable = (PcitureInvoker.ClientTable) ReferenceInvoker.DisconnectProject(2589);
@@ -131,35 +124,23 @@ label_1:
       PcitureInvoker.ClientTable disposeDrive;
       if (num != ReferenceInvoker.DisconnectProject(2597))
       {
-label_1:
-        switch (1)
         {
-          case 0:
-            goto label_1;
-          default:
-            if (false)
-            {
-              // ISSUE: method reference
-              RuntimeMethodHandle runtimeMethodHandle = __methodref (PcitureInvoker.get_DisposeDrive);
-            }
+
+            
+              //this.get_DisposeDrive();
+            
             if (num == ReferenceInvoker.DisconnectProject(2601))
             {
-label_5:
-              switch (1)
+
               {
-                case 0:
-                  goto label_5;
-                default:
                   disposeDrive = (PcitureInvoker.ClientTable) ReferenceInvoker.DisconnectProject(2605);
-                  break;
               }
             }
             else
             {
               disposeDrive = (PcitureInvoker.ClientTable) ReferenceInvoker.DisconnectProject(2613);
-              break;
+
             }
-            break;
         }
       }
       else
@@ -261,26 +242,26 @@ label_2:
       public int parentCancel;
       public int namesID;
       [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 128)]
-      public string parentKeywords;
-      public short parentKeywords;
-      public short currentUri;
-      public short filterID;
-      public byte parentKeywords;
-      public byte currentUri;
+      public string parentKeywordsString;
+      public short parentKeywordsShort;
+      public short currentUriShort;
+      public short filterIDShort;
+      public byte parentKeywordsByte;
+      public byte currentUriByte;
     }
 
     public struct AssistantSite
     {
       internal PcitureInvoker.ServerSerializer parentKeywords;
-      public uint parentKeywords;
-      public IntPtr parentKeywords;
-      public IntPtr currentUri;
-      public IntPtr filterID;
-      public uint currentUri;
-      public uint filterID;
-      public uint parentCancel;
-      public ushort parentKeywords;
-      public ushort currentUri;
+      public uint parentKeywordsUint;
+      public IntPtr parentKeywordsIntPtr;
+      public IntPtr currentUriIntPtr;
+      public IntPtr filterIDIntPtr;
+      public uint currentUriUint;
+      public uint filterIDUint;
+      public uint parentCancelUint;
+      public ushort parentKeywordsUShort;
+      public ushort currentUriUShort;
     }
 
     [StructLayout(LayoutKind.Explicit)]
@@ -289,7 +270,7 @@ label_2:
       [FieldOffset(0)]
       internal uint parentKeywords;
       [FieldOffset(0)]
-      internal ushort parentKeywords;
+      internal ushort parentKeywordsUShort;
       [FieldOffset(2)]
       internal ushort currentUri;
     }

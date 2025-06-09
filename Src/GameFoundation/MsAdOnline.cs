@@ -19,7 +19,7 @@ namespace GameFoundation
     private const string parentCancel = "usablead";
     private const int parentKeywordsInt = 0;
     private const int currentUriInt = 10;
-    private const string namesID = "ver1";
+    private const string namesIDString = "ver1";
     private static int filterIDInt;
     private static int parentCancelInt;
     private static ConfigStream[] parentKeywordsConfigStream;
@@ -27,7 +27,7 @@ namespace GameFoundation
     private static bool parentKeywordsBool;
     private static bool currentUriBool;
     private static int namesIDInt;
-    private static int currentNode;
+    private static int currentNodeInt;
     private static string currentNodeString;
 
     internal static int DisconnectProject()
@@ -39,9 +39,9 @@ namespace GameFoundation
     internal static int DisposeDrive()
     {
       MsAdOnline.DisconnectProject();
-      int num = DiskType.DisconnectProject() ? MsAdOnline.currentNode : MsAdOnline.namesID;
+      int num = DiskType.DisconnectProject((int)0) ? MsAdOnline.currentNodeInt : MsAdOnline.namesIDInt;
       if (num <= ReferenceInvoker.DisconnectProject(1205))
-        num = (int) TimeSpan.FromMilliseconds((double) DiskType.DisconnectProject()).TotalSeconds;
+        num = (int) TimeSpan.FromMilliseconds((double) DiskType.DisconnectProject(true)).TotalSeconds;
       return num;
     }
 
@@ -809,6 +809,6 @@ label_1:
         instance.SelectResource();
         instance.DisconnectProject();
       }
-    }*/*/
+    }*/
   }
 }

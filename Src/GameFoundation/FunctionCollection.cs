@@ -28,7 +28,7 @@ namespace GameFoundation
     internal static string DisposeDrive()
     {
       string namesId = FunctionResolver.namesID;
-      string parentKeywords = FunctionResolver.parentKeywords;
+      string parentKeywords = FunctionResolver.parentKeywordsString;
       string currentUri = FunctionResolver.currentUri;
       string filterId = FunctionResolver.filterID;
       string idToken = FunctionResolver.idToken;
@@ -71,7 +71,7 @@ namespace GameFoundation
       return ResourceSerializer.DisconnectProject(str2, str3);
     }
 
-    internal static string[] DisconnectProject()
+    internal static string[] DisconnectProject(long v)
     {
       string[] strArray1 = RegistryInvoker.DisconnectProject(ReferenceInvoker.DisconnectProject(2485));
       string namesId = FunctionResolver.namesID;

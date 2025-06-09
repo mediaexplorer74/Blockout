@@ -13,56 +13,51 @@ namespace GameFoundation
 {
   internal sealed class DiskType
   {
-    internal static int DisconnectProject()
+    internal static void DisconnectProject()
     {
-      return DiskType.DisconnectProject(DiskType.DisconnectProject());
+      DiskType.DisconnectProject((int)0);
     }
 
+    internal static bool DisconnectProject(int v)
+    {
+      return true; 
+    }
+
+    
     internal static int DisconnectProject(bool _param0)
     {
       int totalMilliseconds;
       if (_param0)
       {
-label_1:
-        switch (6)
-        {
-          case 0:
-            goto label_1;
-          default:
-            if (false)
-            {
-              // ISSUE: method reference
-              RuntimeMethodHandle runtimeMethodHandle = __methodref (DiskType.DisconnectProject);
-            }
-            totalMilliseconds = (int) TimeSpan.FromSeconds(ReferenceInvoker.DisconnectProject(1673)).TotalMilliseconds;
-            break;
-        }
+        //base.DisconnectProject();            
+        totalMilliseconds = (int) TimeSpan.FromSeconds(ReferenceInvoker.DisconnectProject(1673)).TotalMilliseconds;
+
       }
       else
         totalMilliseconds = (int) TimeSpan.FromSeconds(ReferenceInvoker.DisconnectProject(1681)).TotalMilliseconds;
       return totalMilliseconds;
-    }
+    }//
 
     /*internal static bool DisconnectProject()
     {
       bool flag = ReferenceInvoker.DisconnectProject(1689) != 0;
       try
       {
-        if (NetworkInformation.GetInternetConnectionProfile().GetConnectionCost().NetworkCostType == ReferenceInvoker.DisconnectProject(1693))
+        if (NetworkInformation.GetInternetConnectionProfile()
+                    .GetConnectionCost().NetworkCostType == ReferenceInvoker.DisconnectProject(1693))
         {
-label_2:
-          switch (6)
+//label_2:
+//          switch (6)
           {
-            case 0:
-              goto label_2;
-            default:
+//            case 0:
+//              goto label_2;
+//            default:
               if (false)
               {
-                // ISSUE: method reference
-                RuntimeMethodHandle runtimeMethodHandle = __methodref (DiskType.DisconnectProject);
+                DiskType.DisconnectProject();
               }
               flag = ReferenceInvoker.DisconnectProject(1697) != 0;
-              break;
+//              break;
           }
         }
       }
@@ -93,9 +88,13 @@ label_1:
 
     public static ConfigStream[] DisposeDrive(ConfigStream[] _param0, int _param1)
     {
-      ConfigStream[] configStreamArray = NetworkToken.DisconnectProject(Math.Min((int) OptionsSet.DisconnectProject(_param0), _param1));
+      ConfigStream[] configStreamArray = 
+                NetworkToken.DisconnectProject(Math.Min((int) OptionsSet.DisconnectProject(_param0), 
+                _param1));
       List<int> intList = new List<int>();
-      for (int index = ReferenceInvoker.DisconnectProject(1701); index < (int) OptionsSet.DisconnectProject(_param0); index += ReferenceInvoker.DisconnectProject(1705))
+      for (int index = ReferenceInvoker.DisconnectProject(1701); 
+                index < (int) OptionsSet.DisconnectProject(_param0); 
+                index += ReferenceInvoker.DisconnectProject(1705))
         intList.Add(index);
       int v = 1;
 label_3:
@@ -114,18 +113,18 @@ label_3:
             configStreamArray[index1] = _param0[index2];
             intList.RemoveAt(index2);
           }
-label_9:
-          switch (3)
+//label_9:
+//          switch (3)
           {
-            case 0:
-              goto label_9;
-            default:
+//            case 0:
+//              goto label_9;
+//            default:
               return configStreamArray;
           }
       }
     }
 
-    internal static ConfigStream[] DisconnectProject(int _param0)
+    internal static ConfigStream[] DisconnectProject(long _param0)
     {
       throw new Exception(EditorService.DisconnectProject(1370));
     }

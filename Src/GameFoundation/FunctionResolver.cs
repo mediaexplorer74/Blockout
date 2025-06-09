@@ -17,8 +17,8 @@ namespace GameFoundation
   internal sealed class FunctionResolver
   {
     internal static FunctionResolver parentKeywords = new FunctionResolver();
-    private static bool parentKeywords;
-    internal static string parentKeywords;
+    private static bool parentKeywordsBool;
+    internal static string parentKeywordsString;
     internal static string currentUri;
     internal static string filterID;
     internal static string parentCancel;
@@ -30,58 +30,43 @@ namespace GameFoundation
 
     private static void DisconnectProject()
     {
-      if (FunctionResolver.parentKeywords)
+      if (FunctionResolver.parentKeywordsBool)
         return;
-      FunctionResolver.parentKeywords = PcitureInvoker.get_DisposeDrive().ToString();
+      FunctionResolver.parentKeywordsString = PcitureInvoker.get_DisposeDrive().ToString();
       FunctionResolver.currentUri = PcitureInvoker.get_DisconnectProject().ToString();
       FunctionResolver.filterID = Package.Current.Id.Architecture.ToString();
       FunctionResolver.parentCancel = FunctionResolver.ListQueue();
-      FunctionResolver.namesID = FunctionResolver.DisconnectProject();
+      FunctionResolver.namesID = FunctionResolver.DisconnectProject(true);
       CultureInfo cultureInfo1;
       CultureInfo cultureInfo2;
       PlatformHelper.ListQueue(out cultureInfo1, out cultureInfo2);
       FunctionResolver.idToken = cultureInfo1.ToString();
       FunctionResolver.currentNode = cultureInfo2.ToString();
-      FunctionResolver.parentKeywords = ReferenceInvoker.DisconnectProject(2133) != 0;
+      FunctionResolver.parentKeywordsBool = ReferenceInvoker.DisconnectProject(2133) != 0;
     }
 
-    /*private static string DisconnectProject()
+    private static string DisconnectProject(bool flag)
     {
       string contentForFile = PlatformLocalStorage.LoadTextFromFile(EditorService.DisconnectProject(1853));
       if (string.IsNullOrEmpty(contentForFile))
       {
-label_1:
-        switch (3)
+        
+        // this.DisconnectProject();
+        
+        Guid guid;
+        do
         {
-          case 0:
-            goto label_1;
-          default:
-            if (false)
-            {
-              // ISSUE: method reference
-              RuntimeMethodHandle runtimeMethodHandle = __methodref (FunctionResolver.DisconnectProject);
-            }
-            Guid guid;
-            do
-            {
-              guid = Guid.NewGuid();
-            }
-            while (RegistryType.DisconnectProject(guid, Guid.Empty));
-label_5:
-            switch (6)
-            {
-              case 0:
-                goto label_5;
-              default:
-                contentForFile = guid.ToString();
-                PlatformLocalStorage.SaveTextToFile(EditorService.DisconnectProject(1853), contentForFile);
-                break;
-            }
-            break;
+            guid = Guid.NewGuid();
+        }
+        while (RegistryType.DisconnectProject(guid, Guid.Empty));
+        {
+            contentForFile = guid.ToString();
+            PlatformLocalStorage.SaveTextToFile(EditorService.DisconnectProject(1853),
+                contentForFile);
         }
       }
       return contentForFile;
-    }*/
+    }
 
     [Obsolete("Not recommended as the full hardware id will change even with attaching a docking station.", true)]
     private static string DisposeDrive()

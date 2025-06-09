@@ -45,6 +45,7 @@ namespace GameFoundation
                 return ReferenceInvoker.DisconnectProject(2037) != 0;
             }
 
+          
             internal static bool DisconnectProject(string _param0)
             {
                 if (string.IsNullOrEmpty(_param0))
@@ -70,7 +71,7 @@ namespace GameFoundation
                 PlatformHelper.DisconnectProject(_param0.AbsoluteUri);
             }
 
-            //internal static long DisconnectProject() => (long)ReferenceInvoker.DisconnectProject(2045);
+            internal static long DisconnectProject(long v) => (long)ReferenceInvoker.DisconnectProject(2045);
 
             internal static long DisposeDrive() => (long)ReferenceInvoker.DisconnectProject(2049);
 

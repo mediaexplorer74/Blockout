@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Users\Admin\Desktop\RE\BlockOut_V1\Blockout.exe-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{22482037-E86A-4189-99F8-92E0A1375181}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>Blockout</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <ApplicationVersion>1.2.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GameFoundation">
+      <HintPath>lib\GameFoundation.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Advertising.WinRT.UI">
+      <HintPath>lib\Microsoft.Advertising.WinRT.UI.winmd</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>lib\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections" />
+    <Reference Include="System.Diagnostics.Debug" />
+    <Reference Include="System.Diagnostics.Tools" />
+    <Reference Include="System.IO" />
+    <Reference Include="System.Linq" />
+    <Reference Include="System.ObjectModel" />
+    <Reference Include="System.Reflection" />
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Runtime.Extensions" />
+    <Reference Include="System.Runtime.InteropServices.WindowsRuntime" />
+    <Reference Include="System.Runtime.Serialization.Primitives" />
+    <Reference Include="System.Runtime.Serialization.Xml" />
+    <Reference Include="System.Runtime.WindowsRuntime" />
+    <Reference Include="System.Runtime.WindowsRuntime.UI.Xaml" />
+    <Reference Include="System.Text.Encoding" />
+    <Reference Include="System.Threading" />
+    <Reference Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BlockoutRt\App.cs" />
+    <Compile Include="BlockoutRt\GamePage.cs" />
+    <Compile Include="BlockoutRt\Program.cs" />
+    <Compile Include="BlockoutRt\Common\BindableBase.cs" />
+    <Compile Include="BlockoutRt\Common\BooleanNegationConverter.cs" />
+    <Compile Include="BlockoutRt\Common\BooleanToVisibilityConverter.cs" />
+    <Compile Include="BlockoutRt\Common\LayoutAwarePage.cs" />
+    <Compile Include="BlockoutRt\Common\RichTextColumns.cs" />
+    <Compile Include="BlockoutRt\Common\SuspensionManagerException.cs" />
+    <Compile Include="Shared\IElement.cs" />
+    <Compile Include="Shared\IElementGenerator.cs" />
+    <Compile Include="Blockout\FadeState.cs" />
+    <Compile Include="Blockout\AssemblyInfoAttribute.cs" />
+    <Compile Include="Blockout\Achievement.cs" />
+    <Compile Include="Blockout\AchievementHighscore.cs" />
+    <Compile Include="Blockout\ClientTree.cs" />
+    <Compile Include="Blockout\AchievementManager.cs" />
+    <Compile Include="Blockout\AchievementProperties.cs" />
+    <Compile Include="Blockout\DatabaseLoader.cs" />
+    <Compile Include="Blockout\Stream.cs" />
+    <Compile Include="Blockout\AchievementTracker.cs" />
+    <Compile Include="Blockout\Background.cs" />
+    <Compile Include="Blockout\BackgroundCounter.cs" />
+    <Compile Include="Blockout\BackgroundMovingObject.cs" />
+    <Compile Include="Blockout\BackgroundObjects.cs" />
+    <Compile Include="Blockout\SymbolStack.cs" />
+    <Compile Include="Blockout\EnemyBigBase.cs" />
+    <Compile Include="Blockout\EnemyManager.cs" />
+    <Compile Include="Blockout\EnemyPointsVisual.cs" />
+    <Compile Include="Blockout\Game1.cs" />
+    <Compile Include="Blockout\Gui.cs" />
+    <Compile Include="Blockout\Block.cs" />
+    <Compile Include="Blockout\BlockTypes.cs" />
+    <Compile Include="Blockout\BlockMovementDirection.cs" />
+    <Compile Include="Blockout\ElementGenerator.cs" />
+    <Compile Include="Blockout\GameGenerator.cs" />
+    <Compile Include="Blockout\BlockMovement.cs" />
+    <Compile Include="Blockout\GameLevel.cs" />
+    <Compile Include="Blockout\PredefinedLevels.cs" />
+    <Compile Include="Blockout\BookmarkManager.cs" />
+    <Compile Include="Blockout\StoreManager.cs" />
+    <Compile Include="Blockout\Player.cs" />
+    <Compile Include="Blockout\AchievementsScreen.cs" />
+    <Compile Include="Blockout\GameplayScreen.cs" />
+    <Compile Include="Blockout\PuzzlePacksScreen.cs" />
+    <Compile Include="Blockout\PuzzleScreen.cs" />
+    <Compile Include="Blockout\UpgradeMenuScreen.cs" />
+    <Compile Include="Blockout\TemplateCollection.cs" />
+    <Compile Include="Blockout\SettingsRt.cs" />
+    <Compile Include="Blockout\SymbolContext.cs" />
+    <Compile Include="Blockout\EmulatorFactory.cs" />
+    <Compile Include="Blockout\ProjectToken.cs" />
+    <Compile Include="Blockout\TreeNodeAttribute.cs" />
+    <Compile Include="Blockout\ServerResolver.cs" />
+    <Compile Include="Blockout\ActivatorOptions.cs" />
+    <Compile Include="Blockout\ProjectInvoker.cs" />
+    <Compile Include="Blockout\ProcessStack.cs" />
+    <Compile Include="Blockout\FunctionLoader.cs" />
+    <Compile Include="Blockout\NetworkProvider.cs" />
+    <Compile Include="Blockout\ActionContext.cs" />
+    <Compile Include="Blockout\ActivatorAttribute.cs" />
+    <Compile Include="Blockout\ActivatorFactory.cs" />
+    <Compile Include="Blockout\ActivatorManager.cs" />
+    <Compile Include="Blockout\ActivityInvoker.cs" />
+    <Compile Include="Blockout\ActivityProvider.cs" />
+    <Compile Include="Blockout\ActivityQueue.cs" />
+    <Compile Include="Blockout\ActivitySet.cs" />
+    <Compile Include="Blockout\AddinConverter.cs" />
+    <Compile Include="Blockout\AddinInfo.cs" />
+    <Compile Include="Blockout\AddinList.cs" />
+    <Compile Include="Blockout\AssemblyContext.cs" />
+    <Compile Include="Blockout\AssemblyType.cs" />
+    <Compile Include="Blockout\AssistantAttribute.cs" />
+    <Compile Include="Blockout\BuilderDictionary.cs" />
+    <Compile Include="Blockout\BuilderFactory.cs" />
+    <Compile Include="Blockout\BuilderProvider.cs" />
+    <Compile Include="Blockout\ClientSerializer.cs" />
+    <Compile Include="Blockout\ComponentDictionary.cs" />
+    <Compile Include="Blockout\ConfigConverter.cs" />
+    <Compile Include="Blockout\ConfigDictionary.cs" />
+    <Compile Include="Blockout\ConfigProvider.cs" />
+    <Compile Include="Blockout\ConfigService.cs" />
+    <Compile Include="Blockout\ConnectionContext.cs" />
+    <Compile Include="Blockout\ConnectionInvoker.cs" />
+    <Compile Include="Blockout\ContextList.cs" />
+    <Compile Include="Blockout\ContextSettings.cs" />
+    <Compile Include="Blockout\ContextTree.cs" />
+    <Compile Include="Blockout\ControlLayout.cs" />
+    <Compile Include="Blockout\DatabaseTree.cs" />
+    <Compile Include="Blockout\DatabaseType.cs" />
+    <Compile Include="Blockout\DeploymentSite.cs" />
+    <Compile Include="Blockout\DeviceQueue.cs" />
+    <Compile Include="Blockout\DialogContext.cs" />
+    <Compile Include="Blockout\DialogStream.cs" />
+    <Compile Include="Blockout\DirectoryContext.cs" />
+    <Compile Include="Blockout\DirectoryHelper.cs" />
+    <Compile Include="Blockout\DiskEventArgs.cs" />
+    <Compile Include="Blockout\DiskSerializer.cs" />
+    <Compile Include="Blockout\DockingPane.cs" />
+    <Compile Include="Blockout\DockingPaneEditor.cs" />
+    <Compile Include="Blockout\DockingPaneService.cs" />
+    <Compile Include="Blockout\DomainStack.cs" />
+    <Compile Include="Blockout\DomainTree.cs" />
+    <Compile Include="Blockout\DriveConverter.cs" />
+    <Compile Include="Blockout\DriveService.cs" />
+    <Compile Include="Blockout\DriveStream.cs" />
+    <Compile Include="Blockout\EditorType.cs" />
+    <Compile Include="Blockout\EmulatorToken.cs" />
+    <Compile Include="Blockout\FileLoader.cs" />
+    <Compile Include="Blockout\FileScope.cs" />
+    <Compile Include="Blockout\FileSet.cs" />
+    <Compile Include="Blockout\FormConverter.cs" />
+    <Compile Include="Blockout\GroupSet.cs" />
+    <Compile Include="Blockout\IconSet.cs" />
+    <Compile Include="Blockout\ImageAttribute.cs" />
+    <Compile Include="Blockout\ImageScope.cs" />
+    <Compile Include="Blockout\ImageStream.cs" />
+    <Compile Include="Blockout\MemoryEventArgs.cs" />
+    <Compile Include="Blockout\MenuCollection.cs" />
+    <Compile Include="Blockout\MenuInvoker.cs" />
+    <Compile Include="Blockout\MenuItemDesigner.cs" />
+    <Compile Include="Blockout\MenuTable.cs" />
+    <Compile Include="Blockout\MenuToken.cs" />
+    <Compile Include="Blockout\NetworkDesigner.cs" />
+    <Compile Include="Blockout\NetworkEditor.cs" />
+    <Compile Include="Blockout\NetworkQueue.cs" />
+    <Compile Include="Blockout\NodeOptions.cs" />
+    <Compile Include="Blockout\OptionsFactory.cs" />
+    <Compile Include="Blockout\PackageProvider.cs" />
+    <Compile Include="Blockout\PageOptions.cs" />
+    <Compile Include="Blockout\PaneService.cs" />
+    <Compile Include="Blockout\PartitionHelper.cs" />
+    <Compile Include="Blockout\PartitionService.cs" />
+    <Compile Include="Blockout\PathDesigner.cs" />
+    <Compile Include="Blockout\PcitureQueue.cs" />
+    <Compile Include="Blockout\PcitureSite.cs" />
+    <Compile Include="Blockout\PluginFactory.cs" />
+    <Compile Include="Blockout\ProcessCollection.cs" />
+    <Compile Include="Blockout\ProcessFactory.cs" />
+    <Compile Include="Blockout\ProcessResolver.cs" />
+    <Compile Include="Blockout\ProjectService.cs" />
+    <Compile Include="Blockout\QueueLayout.cs" />
+    <Compile Include="Blockout\QueueResolver.cs" />
+    <Compile Include="Blockout\QueueSettings.cs" />
+    <Compile Include="Blockout\QueueStack.cs" />
+    <Compile Include="Blockout\ReferenceHelper.cs" />
+    <Compile Include="Blockout\ReferenceOptions.cs" />
+    <Compile Include="Blockout\ReferenceSet.cs" />
+    <Compile Include="Blockout\ServerInvoker.cs" />
+    <Compile Include="Blockout\SolutionAttribute.cs" />
+    <Compile Include="Blockout\SolutionDictionary.cs" />
+    <Compile Include="Blockout\StoreCollection.cs" />
+    <Compile Include="Blockout\StoreList.cs" />
+    <Compile Include="Blockout\StoreTable.cs" />
+    <Compile Include="Blockout\StoreToken.cs" />
+    <Compile Include="Blockout\StreamManager.cs" />
+    <Compile Include="Blockout\StubSerializer.cs" />
+    <Compile Include="Blockout\SymbolEditor.cs" />
+    <Compile Include="Blockout\TextFileSettings.cs" />
+    <Compile Include="Blockout\ToolboxCollection.cs" />
+    <Compile Include="Blockout\ToolboxDictionary.cs" />
+    <Compile Include="Blockout\ToolboxEventArgs.cs" />
+    <Compile Include="Blockout\TreeNodeContext.cs" />
+    <Compile Include="Blockout\TreeNodeSerializer.cs" />
+    <Compile Include="Blockout\TreeNodeTree.cs" />
+    <Compile Include="Blockout\ViewInvoker.cs" />
+    <Compile Include="Blockout\WindowLayout.cs" />
+    <Compile Include="Blockout\WindowTable.cs" />
+    <Compile Include="Blockout\XmlFileContext.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Blockout$" />
+    <EmbeddedResource Include="Blockout_0025" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

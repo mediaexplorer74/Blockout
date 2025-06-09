@@ -13,19 +13,19 @@ namespace GameFoundation.Managed
 {
     public class ImageLooper
     {
-        private Rectangle parentKeywords;// = 60;
-        private Texture2D parentKeywords2;
+        private Rectangle[] parentKeywordsRList = new Rectangle[60];
+        private Texture2D parentKeywordsTexture2D;
         public Rectangle RecPosition;
         public bool StopAfterOneAnimation;
-        private Rectangle parentKeywords3;
-        private bool parentKeywords4;
-        private bool currentUri;
-        private int currentUri5;
-        private bool filterID;
-        private double parentKeywords6;
+        private Rectangle parentKeywordsRectangle;
+        private bool parentKeywordsBool;
+        private bool currentUriBool;
+        private int currentUriInt;
+        private bool filterIDBool;
+        private double parentKeywordsDouble;
         private bool parentCancel;
-        private int filterID7;
-        private int parentCancel8;
+        private int filterIDInt;
+        private int parentCancelInt;
         public bool Animate;
 
         public ImageLooper(
@@ -38,22 +38,24 @@ namespace GameFoundation.Managed
             {
                 if (numSubImages > 0)
                 {
-                    this.parentKeywords = default;//imageToLoop;
-                    this.parentKeywords = default;//rightToLeftSubimageAnimation;
-                    this.currentUri = jumpFromEndToBeginningOfSubImages;
-                    this.parentCancel = default;//numSubImages;
-                    this.currentUri = default;//(int)((double)imageToLoop.Width / (double)numSubImages);
+                    this.parentKeywordsTexture2D = imageToLoop;
+                    this.parentKeywordsBool = rightToLeftSubimageAnimation;
+                    this.currentUriBool = jumpFromEndToBeginningOfSubImages;
+                    this.parentCancelInt = numSubImages;
+                    this.currentUriInt = (int)((double)imageToLoop.Width / (double)numSubImages);
                     if (!rightToLeftSubimageAnimation)
                     {
-                        this.parentKeywords = new Rectangle(0, 0, /*this.currentUri*/imageToLoop.Width, 
+                        this.parentKeywordsRectangle = new Rectangle(0, 0, this.currentUriInt, 
                             imageToLoop.Height);
                     }
                     else
                     {
-                        this.parentKeywords = new Rectangle(imageToLoop.Width - /*this.currentUri*/0, 0, 
-                            /*this.currentUri*/imageToLoop.Width, imageToLoop.Height);
+                        this.parentKeywordsRectangle = new Rectangle(
+                            imageToLoop.Width - this.currentUriInt,  0, 
+                            this.currentUriInt, imageToLoop.Height);
                     }
-                    this.RecPosition = new Rectangle(0, 0, this.parentKeywords.Width, this.parentKeywords.Height);
+                    this.RecPosition = new Rectangle(0, 0, 
+                        this.parentKeywordsTexture2D.Width, this.parentKeywordsTexture2D.Height);
                     return;
                 }
             }
@@ -62,20 +64,21 @@ namespace GameFoundation.Managed
 
         public void Start(Vector2 startPos, bool startToAnimate)
         {
-            this.filterID = false;
+            this.filterIDBool = false;
             if (startToAnimate)
                 this.Animate = true;
-            this.RecPosition = new Rectangle((int)startPos.X, (int)startPos.Y, this.parentKeywords.Width, this.parentKeywords.Height);
-            this.parentKeywords = false;
-            if (this.parentKeywords)
+            this.RecPosition = new Rectangle((int)startPos.X, (int)startPos.Y, 
+                this.parentKeywordsTexture2D.Width, this.parentKeywordsTexture2D.Height);
+            this.parentKeywordsBool = false;
+            if (this.parentKeywordsBool)
             {
                 this.parentCancel = false;
-                this.filterID = 0;
+                this.filterIDInt = 0;
             }
             else
             {
                 this.parentCancel = false;
-                this.filterID = this.parentCancel - 0;
+                this.filterIDInt = this.parentCancelInt - 0;
             }
             this.DisconnectProject();
         }
@@ -83,16 +86,16 @@ namespace GameFoundation.Managed
         public void RestartAnimation()
         {
             this.Animate = true;
-            this.parentKeywords = false;
-            if (this.parentKeywords)
+            this.parentKeywordsBool = false;
+            if (this.parentKeywordsBool)
             {
                 this.parentCancel = false;
-                this.filterID = 0;
+                this.filterIDInt = 0;
             }
             else
             {
                 this.parentCancel = false;
-                this.filterID = this.parentCancel - 0;
+                this.filterIDInt = this.parentCancelInt - 0;
             }
             this.DisconnectProject();
         }
@@ -105,36 +108,36 @@ namespace GameFoundation.Managed
             }
             else
             {
-                this.parentKeywords += elapsedGameTimeMs;
-                if (this.parentKeywords >= 0)
+                this.parentKeywordsDouble += elapsedGameTimeMs;
+                if (this.parentKeywordsDouble >= 0)
                 {
-                    this.parentKeywords -= 0;
+                    this.parentKeywordsDouble -= 0;
                     if (this.parentCancel)
                     {
-                        this.filterID -= 0;
-                        if (this.filterID < 0)
+                        this.filterIDInt -= 0;
+                        if (this.filterIDInt < 0)
                         {
                             if (this.StopAfterOneAnimation)
                             {
-                                if (!this.currentUri)
+                                if (!this.currentUriBool)
                                 {
-                                    this.filterID = 0;
+                                    this.filterIDInt = 0;
                                     this.Animate = false;
                                 }
                                 else
                                 {
-                                    this.filterID = this.parentCancel - 0;
+                                    this.filterIDInt = this.parentCancelInt - 0;
                                 }
                             }
                             else
                             {
-                                if (this.currentUri)
+                                if (this.currentUriBool)
                                 {
-                                    this.filterID = this.parentCancel - 0;
+                                    this.filterIDInt = this.parentCancelInt - 0;
                                 }
                                 else
                                 {
-                                    this.filterID = 0;
+                                    this.filterIDInt = 0;
                                     this.parentCancel = false;
                                 }
                             }
@@ -142,30 +145,30 @@ namespace GameFoundation.Managed
                     }
                     else
                     {
-                        this.filterID += 0;
-                        if (this.filterID >= this.parentCancel)
+                        this.filterIDInt += 0;
+                        if (this.filterIDInt >= this.parentCancelInt)
                         {
                             if (this.StopAfterOneAnimation)
                             {
-                                if (!this.currentUri)
+                                if (!this.currentUriBool)
                                 {
-                                    this.filterID = this.parentCancel - 0;
+                                    this.filterIDInt = this.parentCancelInt - 0;
                                     this.Animate = false;
                                 }
                                 else
                                 {
-                                    this.filterID = 0;
+                                    this.filterIDInt = 0;
                                 }
                             }
                             else
                             {
-                                if (this.currentUri)
+                                if (this.currentUriBool)
                                 {
-                                    this.filterID = 0;
+                                    this.filterIDInt = 0;
                                 }
                                 else
                                 {
-                                    this.filterID = this.parentCancel - 0;
+                                    this.filterIDInt = this.parentCancelInt - 0;
                                     this.parentCancel = false;
                                 }
                             }
@@ -178,36 +181,37 @@ namespace GameFoundation.Managed
 
         private void DisconnectProject()
         {
-            this.parentKeywords = new Rectangle(
-                this.currentUri * this.filterID, 0, 
-                this.currentUri, this.parentKeywords.Height);
+            this.parentKeywordsRectangle = new Rectangle(
+                this.currentUriInt * this.filterIDInt, 0, 
+                this.currentUriInt, this.parentKeywordsTexture2D.Height);
         }
 
         public void Draw()
         {
-            if (!this.filterID)
+            if (!this.filterIDBool)
             {
                 return;
             }
             else
             {
                 GameBase.Instance.SpriteBatch.Draw(
-                    this.parentKeywords, this.RecPosition, new Rectangle?(this.parentKeywords), Color.White);
+                    this.parentKeywordsTexture2D, this.RecPosition, 
+                    new Rectangle?(this.parentKeywordsRectangle), Color.White);
             }
         }
 
         public void Draw(Color visibilityColor)
         {
-            if (!this.filterID)
+            if (!this.filterIDBool)
             {
                 return;
             }
             else
             {
                 GameBase.Instance.SpriteBatch.Draw(
-                    this.parentKeywords, 
+                    this.parentKeywordsTexture2D, 
                     this.RecPosition, 
-                    new Rectangle?(this.parentKeywords), 
+                    new Rectangle?(this.parentKeywordsRectangle), 
                     visibilityColor);
             }
         }

@@ -4,6 +4,7 @@
 // MVID: 92FD7834-EF64-4872-85C6-A525AB8BDDBE
 // *************************************************************
 
+using GameFoundation.GameFoundation;
 using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
@@ -14,8 +15,8 @@ namespace GameFoundation
 {
   public class MemoryUsage : IInfoTextElement
   {
-    private const int parentKeywords = 100;
-    private const int currentUri = 80;
+    private const int parentKeywordsInt = 100;
+    private const int currentUriInt = 80;
     private long parentKeywordsLong;
     private long currentUriLong;
     private double parentKeywordsDouble;
@@ -29,8 +30,8 @@ namespace GameFoundation
 
     public void Update(GameTime gameTime)
     {
-      this.parentKeywords += gameTime.ElapsedGameTime.TotalMilliseconds;
-      if (this.parentKeywords >= ReferenceInvoker.DisconnectProject(5441))
+      this.parentKeywordsDouble += gameTime.ElapsedGameTime.TotalMilliseconds;
+      if (this.parentKeywordsDouble >= ReferenceInvoker.DisconnectProject(5441))
       {
 label_1:
         switch (1)
@@ -39,15 +40,14 @@ label_1:
             goto label_1;
           default:
             if (false)
-            {
-              // ISSUE: method reference
-              RuntimeMethodHandle runtimeMethodHandle = __methodref (MemoryUsage.Update);
+            {              
+              this.Update(gameTime);
             }
-            this.parentKeywords -= ReferenceInvoker.DisconnectProject(5449);
+            this.parentKeywordsDouble -= ReferenceInvoker.DisconnectProject(5449);
             try
             {
-              this.parentKeywords = PlatformHelper.DisconnectProject();
-              this.currentUri = PlatformHelper.DisposeDrive();
+              this.parentKeywordsDouble = PlatformHelper.DisconnectProject((long)0);
+              this.currentUriLong = PlatformHelper.DisposeDrive();
               break;
             }
             catch (Exception ex)
@@ -61,11 +61,13 @@ label_1:
 
     public KeyValuePair<StringBuilder, Color>[] GetTextToDraw()
     {
-      this.parentKeywords.Remove(EditorService.DisconnectProject(6087).Length, this.parentKeywords.Length - EditorService.DisconnectProject(6087).Length);
-      this.parentKeywords.Concat((float) this.parentKeywords);
-      this.currentUri.Remove(EditorService.DisconnectProject(6098).Length, this.currentUri.Length - EditorService.DisconnectProject(6098).Length);
-      this.currentUri.Concat((float) this.currentUri);
-      if (this.parentKeywords >= (long) ReferenceInvoker.DisconnectProject(5457))
+      this.parentKeywordsStringBuilder.Remove(EditorService.DisconnectProject(6087).Length, 
+          this.parentKeywordsStringBuilder.Length - EditorService.DisconnectProject(6087).Length);
+      this.parentKeywordsStringBuilder.Concat((float) this.parentKeywordsDouble);
+      this.currentUriStringBuilder.Remove(EditorService.DisconnectProject(6098).Length, 
+          this.currentUriStringBuilder.Length - EditorService.DisconnectProject(6098).Length);
+      this.currentUriStringBuilder.Concat((float) this.currentUriLong);
+      if (this.parentKeywordsLong >= (long) ReferenceInvoker.DisconnectProject(5457))
       {
 label_1:
         switch (1)
@@ -75,20 +77,23 @@ label_1:
           default:
             if (false)
             {
-              // ISSUE: method reference
-              RuntimeMethodHandle runtimeMethodHandle = __methodref (MemoryUsage.GetTextToDraw);
+              this.GetTextToDraw();
             }
-            this.parentKeywords[ReferenceInvoker.DisconnectProject(5461)] = new KeyValuePair<StringBuilder, Color>(this.parentKeywords, Color.Red);
+            this.parentKeywordsKeyValuePair[ReferenceInvoker.DisconnectProject(5461)] 
+                            = new KeyValuePair<StringBuilder, Color>(this.parentKeywordsStringBuilder, Color.Red);
             break;
         }
       }
       else
-        this.parentKeywords[ReferenceInvoker.DisconnectProject(5465)] = new KeyValuePair<StringBuilder, Color>(this.parentKeywords, Color.White);
-      if (this.currentUri >= (long) ReferenceInvoker.DisconnectProject(5469))
-        this.parentKeywords[ReferenceInvoker.DisconnectProject(5473)] = new KeyValuePair<StringBuilder, Color>(this.currentUri, Color.Red);
+        this.parentKeywordsKeyValuePair[ReferenceInvoker.DisconnectProject(5465)] = 
+                    new KeyValuePair<StringBuilder, Color>(this.parentKeywordsStringBuilder, Color.White);
+      if (this.currentUriLong >= (long) ReferenceInvoker.DisconnectProject(5469))
+        this.parentKeywordsKeyValuePair[ReferenceInvoker.DisconnectProject(5473)] = 
+                    new KeyValuePair<StringBuilder, Color>(this.currentUriStringBuilder, Color.Red);
       else
-        this.parentKeywords[ReferenceInvoker.DisconnectProject(5477)] = new KeyValuePair<StringBuilder, Color>(this.currentUri, Color.White);
-      return this.parentKeywords;
+        this.parentKeywordsKeyValuePair[ReferenceInvoker.DisconnectProject(5477)] = 
+                    new KeyValuePair<StringBuilder, Color>(this.currentUriStringBuilder, Color.White);
+      return parentKeywordsKeyValuePair;
     }
   }
 }

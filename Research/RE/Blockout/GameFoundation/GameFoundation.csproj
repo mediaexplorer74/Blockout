@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Users\Admin\Desktop\RE\BlockOut_V1\GameFoundation.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{69FC2D6E-5ADD-4D5A-93E1-147F0D3B0F09}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>GameFoundation</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+    <RootNamespace>GameFoundation</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Advertising.WinRT.UI">
+      <HintPath>lib\Microsoft.Advertising.WinRT.UI.winmd</HintPath>
+    </Reference>
+    <Reference Include="MicrosoftAdvertising">
+      <HintPath>lib\MicrosoftAdvertising.winmd</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>lib\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections" />
+    <Reference Include="System.Diagnostics.Debug" />
+    <Reference Include="System.Globalization" />
+    <Reference Include="System.IO" />
+    <Reference Include="System.Linq" />
+    <Reference Include="System.Net.NetworkInformation" />
+    <Reference Include="System.Net.Requests" />
+    <Reference Include="System.Reflection" />
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Runtime.Extensions" />
+    <Reference Include="System.Runtime.InteropServices" />
+    <Reference Include="System.Runtime.InteropServices.WindowsRuntime" />
+    <Reference Include="System.Runtime.Serialization.Primitives" />
+    <Reference Include="System.Runtime.Serialization.Xml" />
+    <Reference Include="System.Runtime.WindowsRuntime" />
+    <Reference Include="System.Text.Encoding" />
+    <Reference Include="System.Threading" />
+    <Reference Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ColorTextures.cs" />
+    <Compile Include="AssemblyInfoAttribute.cs" />
+    <Compile Include="DataHandler.cs" />
+    <Compile Include="GameData.cs" />
+    <Compile Include="ReferenceInvoker.cs" />
+    <Compile Include="ChallangeLevels.cs" />
+    <Compile Include="GameBase.cs" />
+    <Compile Include="EditorService.cs" />
+    <Compile Include="PackageSet.cs" />
+    <Compile Include="GameSettings.cs" />
+    <Compile Include="GuiBase.cs" />
+    <Compile Include="EnumHelper.cs" />
+    <Compile Include="IntersectionHelper.cs" />
+    <Compile Include="ListExtension.cs" />
+    <Compile Include="RandomManager.cs" />
+    <Compile Include="RectangleExtension.cs" />
+    <Compile Include="StringBuilderExtensions.cs" />
+    <Compile Include="StringLinewiseReadHelper.cs" />
+    <Compile Include="TextureHelper.cs" />
+    <Compile Include="TimerEventless.cs" />
+    <Compile Include="IUpdateableElement.cs" />
+    <Compile Include="ManagedOneTimeAnimator.cs" />
+    <Compile Include="ManagedTimeLimitedBase.cs" />
+    <Compile Include="ConfigStream.cs" />
+    <Compile Include="MsAdOnline.cs" />
+    <Compile Include="OnlineCommunications.cs" />
+    <Compile Include="FormType.cs" />
+    <Compile Include="DiskType.cs" />
+    <Compile Include="BookmarkSite.cs" />
+    <Compile Include="MenuOptions.cs" />
+    <Compile Include="EmulatorTable.cs" />
+    <Compile Include="PackageOptions.cs" />
+    <Compile Include="VectorService.cs" />
+    <Compile Include="XmlFileSerializer.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="PlatformEncryption.cs" />
+    <Compile Include="PlatformHelper.cs" />
+    <Compile Include="FunctionResolver.cs" />
+    <Compile Include="PlatformInheritBase.cs" />
+    <Compile Include="PlatformLocalStorage.cs" />
+    <Compile Include="FunctionCollection.cs" />
+    <Compile Include="PcitureInvoker.cs" />
+    <Compile Include="PlayerBase.cs" />
+    <Compile Include="ScorePoints.cs" />
+    <Compile Include="Scores.cs" />
+    <Compile Include="ScreenState.cs" />
+    <Compile Include="GameScreen.cs" />
+    <Compile Include="InputState.cs" />
+    <Compile Include="ScreenManager.cs" />
+    <Compile Include="BackgroundScreen.cs" />
+    <Compile Include="MenuScreen.cs" />
+    <Compile Include="CreditsMenuScreen.cs" />
+    <Compile Include="GameplayScreenBase.cs" />
+    <Compile Include="HowToPlayMenuScreen.cs" />
+    <Compile Include="LoadingScreen.cs" />
+    <Compile Include="MainMenuScreen.cs" />
+    <Compile Include="MenuLocation.cs" />
+    <Compile Include="MenuEntry.cs" />
+    <Compile Include="MenuEntryButton.cs" />
+    <Compile Include="AssemblyStack.cs" />
+    <Compile Include="ConnectionType.cs" />
+    <Compile Include="MessageBoxScreen.cs" />
+    <Compile Include="OptionsMenuScreen.cs" />
+    <Compile Include="PauseMenuScreen.cs" />
+    <Compile Include="RelativeClickEventArg.cs" />
+    <Compile Include="ScoreMenuScreen.cs" />
+    <Compile Include="ChallangeBlock.cs" />
+    <Compile Include="ChallangeBlockTypes.cs" />
+    <Compile Include="IInfoTextElement.cs" />
+    <Compile Include="AdController.cs" />
+    <Compile Include="QueueManager.cs" />
+    <Compile Include="FrameRateCounter.cs" />
+    <Compile Include="QueueSet.cs" />
+    <Compile Include="InfoText.cs" />
+    <Compile Include="MenuItemService.cs" />
+    <Compile Include="MemoryUsage.cs" />
+    <Compile Include="RunsSlowWatcher.cs" />
+    <Compile Include="SlowdownCounter.cs" />
+    <Compile Include="UpdatePerformance.cs" />
+    <Compile Include="TimeElapsedHandler.cs" />
+    <Compile Include="TemplateConverter.cs" />
+    <Compile Include="ActionEventArgs.cs" />
+    <Compile Include="ActivatorProvider.cs" />
+    <Compile Include="ActivatorSettings.cs" />
+    <Compile Include="ActivityAttribute.cs" />
+    <Compile Include="ActivityTable.cs" />
+    <Compile Include="AssemblyAttribute.cs" />
+    <Compile Include="AssemblyCollection.cs" />
+    <Compile Include="AssemblyScope.cs" />
+    <Compile Include="AssistantQueue.cs" />
+    <Compile Include="AssistantTable.cs" />
+    <Compile Include="AssistantType.cs" />
+    <Compile Include="BitmapService.cs" />
+    <Compile Include="BitmapStack.cs" />
+    <Compile Include="BitmapStream.cs" />
+    <Compile Include="BookmarkFactory.cs" />
+    <Compile Include="ClientContext.cs" />
+    <Compile Include="ClientQueue.cs" />
+    <Compile Include="ContextResolver.cs" />
+    <Compile Include="ContextToken.cs" />
+    <Compile Include="ControlSet.cs" />
+    <Compile Include="DatabaseQueue.cs" />
+    <Compile Include="DeploymentSet.cs" />
+    <Compile Include="DeviceOptions.cs" />
+    <Compile Include="DeviceSite.cs" />
+    <Compile Include="DiskAttribute.cs" />
+    <Compile Include="DiskManager.cs" />
+    <Compile Include="DomainDictionary.cs" />
+    <Compile Include="DomainEditor.cs" />
+    <Compile Include="DomainFactory.cs" />
+    <Compile Include="DomainResolver.cs" />
+    <Compile Include="DriveAttribute.cs" />
+    <Compile Include="FileList.cs" />
+    <Compile Include="Form.cs" />
+    <Compile Include="FormEventArgs.cs" />
+    <Compile Include="FormFactory.cs" />
+    <Compile Include="FunctionFactory.cs" />
+    <Compile Include="FunctionQueue.cs" />
+    <Compile Include="GroupEventArgs.cs" />
+    <Compile Include="GroupToken.cs" />
+    <Compile Include="IconEditor.cs" />
+    <Compile Include="IconEventArgs.cs" />
+    <Compile Include="IconSite.cs" />
+    <Compile Include="IconStack.cs" />
+    <Compile Include="ImageEditor.cs" />
+    <Compile Include="ImageTable.cs" />
+    <Compile Include="LineDictionary.cs" />
+    <Compile Include="LineScope.cs" />
+    <Compile Include="LineSettings.cs" />
+    <Compile Include="MemoryInvoker.cs" />
+    <Compile Include="MemoryManager.cs" />
+    <Compile Include="MenuLoader.cs" />
+    <Compile Include="MenuStream.cs" />
+    <Compile Include="MethodTree.cs" />
+    <Compile Include="NetworkCollection.cs" />
+    <Compile Include="NetworkStack.cs" />
+    <Compile Include="NetworkToken.cs" />
+    <Compile Include="NodeCollection.cs" />
+    <Compile Include="OptionsAttribute.cs" />
+    <Compile Include="OptionsSet.cs" />
+    <Compile Include="OutlineInvoker.cs" />
+    <Compile Include="PackageSettings.cs" />
+    <Compile Include="PageDictionary.cs" />
+    <Compile Include="PageQueue.cs" />
+    <Compile Include="PaneInvoker.cs" />
+    <Compile Include="PartitionManager.cs" />
+    <Compile Include="PartitionSite.cs" />
+    <Compile Include="PathInvoker.cs" />
+    <Compile Include="PathLoader.cs" />
+    <Compile Include="PathProvider.cs" />
+    <Compile Include="PathStream.cs" />
+    <Compile Include="PcitureService.cs" />
+    <Compile Include="PcitureStream.cs" />
+    <Compile Include="PluginQueue.cs" />
+    <Compile Include="ProjectAttribute.cs" />
+    <Compile Include="ProjectList.cs" />
+    <Compile Include="RegistryInvoker.cs" />
+    <Compile Include="RegistryScope.cs" />
+    <Compile Include="RegistrySerializer.cs" />
+    <Compile Include="RegistryService.cs" />
+    <Compile Include="RegistryType.cs" />
+    <Compile Include="ResourceConverter.cs" />
+    <Compile Include="ResourceOptions.cs" />
+    <Compile Include="ResourceSerializer.cs" />
+    <Compile Include="SelectionFactory.cs" />
+    <Compile Include="SelectionType.cs" />
+    <Compile Include="ServerService.cs" />
+    <Compile Include="SolutionTable.cs" />
+    <Compile Include="StoreDesigner.cs" />
+    <Compile Include="StreamSettings.cs" />
+    <Compile Include="StubLayout.cs" />
+    <Compile Include="StubQueue.cs" />
+    <Compile Include="SymbolLayout.cs" />
+    <Compile Include="SymbolSerializer.cs" />
+    <Compile Include="TextFileSet.cs" />
+    <Compile Include="ToolbarInfo.cs" />
+    <Compile Include="ToolbarResolver.cs" />
+    <Compile Include="TreeNodeLayout.cs" />
+    <Compile Include="VectorConverter.cs" />
+    <Compile Include="ViewSet.cs" />
+    <Compile Include="WindowConverter.cs" />
+    <Compile Include="WindowOptions.cs" />
+    <Compile Include="WindowSite.cs" />
+    <Compile Include="XmlFileLoader.cs" />
+    <Compile Include="Managed\ImageLooper.cs" />
+    <Compile Include="Managed\ManagedTimeLimitedImage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GameFoundation$" />
+    <EmbeddedResource Include="GameFoundation_0025" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

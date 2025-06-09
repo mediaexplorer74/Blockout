@@ -15,33 +15,33 @@ namespace GameFoundation
   internal static class QueueManager
   {
     private const int parentKeywords = 20;
-    private static EventHandler<BookmarkSite> parentKeywords;
-    private static EventHandler<MenuOptions> parentKeywords;
-    private static EventHandler<EventArgs> parentKeywords;
-    private static string parentKeywords = EditorService.DisconnectProject(5596);
-    private static PackageOptions parentKeywords;
-    private static Vector2 parentKeywords = new Vector2(ReferenceInvoker.DisconnectProject(5325), ReferenceInvoker.DisconnectProject(5329));
-    private static bool parentKeywords = ReferenceInvoker.DisconnectProject(5333) != 0;
+    private static EventHandler<BookmarkSite> parentKeywordsBookmarkSite;
+    private static EventHandler<MenuOptions> parentKeywordsMenuOptions;
+    private static EventHandler<EventArgs> parentKeywordsEventArgs;
+    private static string parentKeywordsString = EditorService.DisconnectProject(5596);
+    private static PackageOptions parentKeywordsPackageOptions;
+    private static Vector2 parentKeywordsVector2 = new Vector2(ReferenceInvoker.DisconnectProject(5325), ReferenceInvoker.DisconnectProject(5329));
+    private static bool parentKeywordsBool = ReferenceInvoker.DisconnectProject(5333) != 0;
 
-    [SpecialName]
+    //[SpecialName]
     public static bool get_DisconnectProject() => QueueManager.parentKeywords.Enabled;
 
-    [SpecialName]
+    //[SpecialName]
     public static void set_DisconnectProject(bool _param0)
     {
       QueueManager.parentKeywords.Enabled = _param0;
     }
 
-    [SpecialName]
+    //[SpecialName]
     public static bool get_DisposeDrive() => QueueManager.parentKeywords.Visible;
 
-    [SpecialName]
+    //[SpecialName]
     public static void set_DisposeDrive(bool _param0)
     {
       QueueManager.parentKeywords.Visible = _param0;
     }
 
-    [SpecialName]
+    //[SpecialName]
     public static void add_DisconnectProject(EventHandler<BookmarkSite> _param0)
     {
       EventHandler<BookmarkSite> eventHandler1 = QueueManager.parentKeywords;
@@ -53,21 +53,14 @@ namespace GameFoundation
         eventHandler1 = Interlocked.CompareExchange<EventHandler<BookmarkSite>>(ref QueueManager.parentKeywords, eventHandler3, eventHandler2);
       }
       while (eventHandler1 != eventHandler2);
-label_2:
-      switch (4)
+
       {
-        case 0:
-          goto label_2;
-        default:
-          if (true)
-            break;
           // ISSUE: method reference
-          RuntimeMethodHandle runtimeMethodHandle = __methodref (QueueManager.add_DisconnectProject);
-          break;
+          //this.add_DisconnectProject();
       }
     }
 
-    [SpecialName]
+   // [SpecialName]
     public static void remove_DisconnectProject(EventHandler<BookmarkSite> _param0)
     {
       EventHandler<BookmarkSite> eventHandler1 = QueueManager.parentKeywords;
@@ -79,24 +72,15 @@ label_2:
         eventHandler1 = Interlocked.CompareExchange<EventHandler<BookmarkSite>>(ref QueueManager.parentKeywords, eventHandler3, eventHandler2);
       }
       while (eventHandler1 != eventHandler2);
-label_2:
-      switch (2)
       {
-        case 0:
-          goto label_2;
-        default:
-          if (true)
-            break;
-          // ISSUE: method reference
-          RuntimeMethodHandle runtimeMethodHandle = __methodref (QueueManager.remove_DisconnectProject);
-          break;
+         //this.remove_DisconnectProject();
       }
     }
 
-    [SpecialName]
+  //  [SpecialName]
     public static void add_DisconnectProject(EventHandler<MenuOptions> _param0)
     {
-      EventHandler<MenuOptions> eventHandler1 = QueueManager.parentKeywords;
+      EventHandler<MenuOptions> eventHandler1 = QueueManager.parentKeywordsMenuOptions;
       EventHandler<MenuOptions> eventHandler2;
       do
       {
