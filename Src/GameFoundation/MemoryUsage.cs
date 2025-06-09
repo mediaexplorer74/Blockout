@@ -16,12 +16,12 @@ namespace GameFoundation
   {
     private const int parentKeywords = 100;
     private const int currentUri = 80;
-    private long parentKeywords;
-    private long currentUri;
-    private double parentKeywords;
-    private StringBuilder parentKeywords = new StringBuilder(EditorService.DisconnectProject(6119));
-    private StringBuilder currentUri = new StringBuilder(EditorService.DisconnectProject(6136));
-    private KeyValuePair<StringBuilder, Color>[] parentKeywords = OutlineInvoker.DisconnectProject(ReferenceInvoker.DisconnectProject(5481));
+    private long parentKeywordsLong;
+    private long currentUriLong;
+    private double parentKeywordsDouble;
+    private StringBuilder parentKeywordsStringBuilder = new StringBuilder(EditorService.DisconnectProject(6119));
+    private StringBuilder currentUriStringBuilder = new StringBuilder(EditorService.DisconnectProject(6136));
+    private KeyValuePair<StringBuilder, Color>[] parentKeywordsKeyValuePair = OutlineInvoker.DisconnectProject(ReferenceInvoker.DisconnectProject(5481));
 
     public void LoadContent()
     {

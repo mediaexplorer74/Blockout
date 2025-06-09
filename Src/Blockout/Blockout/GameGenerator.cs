@@ -19,8 +19,8 @@ namespace Blockout
     public const int GameSize = 480;
     public const int GameBorderSize = 12;
     private static Rectangle parentKeywords = new Rectangle(ClientTree.DisconnectProject(3300), ClientTree.DisconnectProject(3304), ClientTree.DisconnectProject(3308), ClientTree.DisconnectProject(3312));
-    private static Texture2D parentKeywords = GameBase.Instance.Content.Load<Texture2D>(DatabaseLoader.DisconnectProject(11575));
-    private static int parentKeywords;
+    private static Texture2D parentKeywordsT = GameBase.Instance.Content.Load<Texture2D>(DatabaseLoader.DisconnectProject(11575));
+    private static int parentKeywordsI;
     public static string[] texLevelNames = new List<string>()
     {
       DatabaseLoader.DisconnectProject(11575)

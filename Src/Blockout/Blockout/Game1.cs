@@ -4,7 +4,7 @@
 // MVID: A5FFAAE6-A6F2-4299-B64C-2405C1773121
 // *************************************************************
 
-//using GameFoundation;
+using GameFoundation;
 using Microsoft.Xna.Framework;
 using System;
 using System.Collections.Generic;
@@ -16,7 +16,8 @@ namespace Blockout
     {
         private float parentKeywords;
         private Block parentKeywordsBlock;
-        private object GameSettings;
+        private GameSettings GameSettings;
+        private Game1 game1;
 
         public override GameplayScreenBase CreateGameplayScreen()
         {
@@ -58,7 +59,7 @@ namespace Blockout
                     if (false)
                     {
                         // Removed problematic code causing CS0103 and CS0162 errors
-                        // RuntimeMethodHandle runtimeMethodHandle = __methodref (Game1.DeserializeGameplay);
+                        game1.DeserializeGameplay();
                     }
                     GameplayScreen.Instance = ActivityQueue.DisconnectProject(
                         PlatformLocalStorage.DeserializeObjectFromFile(DatabaseLoader.DisconnectProject(10277), Type.GetTypeFromHandle(StubSerializer.DisconnectProject())));

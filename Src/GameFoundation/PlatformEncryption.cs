@@ -26,7 +26,7 @@ namespace GameFoundation
       return CryptographicBuffer.EncodeToBase64String(CryptographicBuffer.GenerateRandom((uint) ReferenceInvoker.DisconnectProject(1909)));
     }
 
-    internal static void DisconnectProject()
+    /*internal static void DisconnectProject()
     {
       string contentForFile = ViewSet.parentKeywords;
       if (PlatformLocalStorage.FileExists(EditorService.DisconnectProject(1662)))
@@ -65,7 +65,7 @@ label_7:
         }
       }
       PlatformEncryption.DisconnectProject(contentForFile);
-    }
+    }*/
 
     private static void DisconnectProject(string _param0)
     {

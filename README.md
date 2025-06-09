@@ -24,7 +24,7 @@ Blockout is a simple and addictive puzzle game. Your goal is to get the blue blo
 
 
 ## References
-- https://apps.microsoft.com/detail/9wzdncrdfwrq Original BlockOut 1.2.0.1 by Phyron (Windows Dsktop only) 
+- https://apps.microsoft.com/detail/9wzdncrdfwrq Original BlockOut 1.2.0.1 by Phyron (Windows Desktop only) 
 
 
 ## ToDo

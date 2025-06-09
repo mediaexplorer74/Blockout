@@ -24,7 +24,7 @@ namespace BlockoutRt.Common
 
     public RichTextColumns()
     {
-      ((FrameworkElement) this).put_HorizontalAlignment((HorizontalAlignment) ClientTree.DisconnectProject(1984713));
+      this.HorizontalAlignment = (HorizontalAlignment) ClientTree.DisconnectProject(1984713);
     }
 
     public RichTextBlock RichTextContent

@@ -43,7 +43,7 @@ label_1:
       return totalMilliseconds;
     }
 
-    internal static bool DisconnectProject()
+    /*internal static bool DisconnectProject()
     {
       bool flag = ReferenceInvoker.DisconnectProject(1689) != 0;
       try
@@ -70,9 +70,9 @@ label_2:
       {
       }
       return flag;
-    }
+    }*/
 
-    internal static string DisconnectProject(bool _param0)
+    /*internal static string DisconnectProject(bool _param0)
     {
       if (!_param0)
         return EditorService.DisconnectProject(1297);
@@ -89,7 +89,7 @@ label_1:
           }
           return EditorService.DisconnectProject(1224);
       }
-    }
+    }*/
 
     public static ConfigStream[] DisposeDrive(ConfigStream[] _param0, int _param1)
     {
@@ -97,16 +97,16 @@ label_1:
       List<int> intList = new List<int>();
       for (int index = ReferenceInvoker.DisconnectProject(1701); index < (int) OptionsSet.DisconnectProject(_param0); index += ReferenceInvoker.DisconnectProject(1705))
         intList.Add(index);
+      int v = 1;
 label_3:
-      switch (1)
+      switch (v)
       {
         case 0:
           goto label_3;
         default:
           if (false)
           {
-            // ISSUE: method reference
-            RuntimeMethodHandle runtimeMethodHandle = __methodref (DiskType.DisposeDrive);
+            DisposeDrive(_param0,_param1);
           }
           for (int index1 = ReferenceInvoker.DisconnectProject(1709); index1 < (int) OptionsSet.DisconnectProject(configStreamArray); index1 += ReferenceInvoker.DisconnectProject(1713))
           {

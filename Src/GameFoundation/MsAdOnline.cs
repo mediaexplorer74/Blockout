@@ -17,23 +17,23 @@ namespace GameFoundation
     private const string currentUri = "adstoplist.txt";
     internal const string filterID = "msad";
     private const string parentCancel = "usablead";
-    private const int parentKeywords = 0;
-    private const int currentUri = 10;
+    private const int parentKeywordsInt = 0;
+    private const int currentUriInt = 10;
     private const string namesID = "ver1";
-    private static int filterID;
-    private static int parentCancel;
-    private static ConfigStream[] parentKeywords;
-    private static ConfigStream[] currentUri;
-    private static bool parentKeywords;
-    private static bool currentUri;
-    private static int namesID;
+    private static int filterIDInt;
+    private static int parentCancelInt;
+    private static ConfigStream[] parentKeywordsConfigStream;
+    private static ConfigStream[] currentUriConfigStream;
+    private static bool parentKeywordsBool;
+    private static bool currentUriBool;
+    private static int namesIDInt;
     private static int currentNode;
-    private static string currentNode;
+    private static string currentNodeString;
 
     internal static int DisconnectProject()
     {
       MsAdOnline.DisconnectProject();
-      return Math.Max(ReferenceInvoker.DisconnectProject(1201), MsAdOnline.filterID);
+      return Math.Max((byte)ReferenceInvoker.DisconnectProject(1201), MsAdOnline.filterIDInt);
     }
 
     internal static int DisposeDrive()
@@ -45,7 +45,7 @@ namespace GameFoundation
       return num;
     }
 
-    internal static string DisconnectProject()
+    /*internal static string DisconnectProject()
     {
       MsAdOnline.DisconnectProject();
       string str = MsAdOnline.currentNode;
@@ -786,7 +786,7 @@ label_47:
       }
     }
 
-    private static void DisposeDrive()
+    /*private static void DisposeDrive()
     {
       AdController instance = AdController.Instance;
       if (instance == null)
@@ -809,6 +809,6 @@ label_1:
         instance.SelectResource();
         instance.DisconnectProject();
       }
-    }
+    }*/*/
   }
 }

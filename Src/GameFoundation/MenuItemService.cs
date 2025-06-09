@@ -15,14 +15,16 @@ namespace GameFoundation
   internal sealed class MenuItemService : IInfoTextElement
   {
     private TimeSpan parentKeywords;
-    private StringBuilder parentKeywords;
-    private KeyValuePair<StringBuilder, Color>[] parentKeywords = OutlineInvoker.DisconnectProject(ReferenceInvoker.DisconnectProject(5433));
+    private StringBuilder parentKeywordsStringBuilder;
+    private KeyValuePair<StringBuilder, Color>[] parentKeywordsKeyValuePair 
+            = OutlineInvoker.DisconnectProject(ReferenceInvoker.DisconnectProject(5433));
 
     public MenuItemService(TimeSpan _param1)
     {
       this.parentKeywords = _param1;
-      this.parentKeywords = new StringBuilder(RegistryService.DisconnectProject((object) EditorService.DisconnectProject(5847), (object) _param1.TotalSeconds, (object) EditorService.DisconnectProject(5874)));
-      this.parentKeywords[ReferenceInvoker.DisconnectProject(5437)] = new KeyValuePair<StringBuilder, Color>(this.parentKeywords, Color.White);
+      this.parentKeywordsStringBuilder = new StringBuilder(RegistryService.DisconnectProject((object) EditorService.DisconnectProject(5847), (object) _param1.TotalSeconds, (object) EditorService.DisconnectProject(5874)));
+      this.parentKeywordsKeyValuePair[ReferenceInvoker.DisconnectProject(5437)] 
+                = new KeyValuePair<StringBuilder, Color>(this.parentKeywordsStringBuilder, Color.White);
     }
 
     public void LoadContent()
@@ -33,6 +35,6 @@ namespace GameFoundation
     {
     }
 
-    public KeyValuePair<StringBuilder, Color>[] GetTextToDraw() => this.parentKeywords;
+    public KeyValuePair<StringBuilder, Color>[] GetTextToDraw() => this.parentKeywordsKeyValuePair;
   }
 }

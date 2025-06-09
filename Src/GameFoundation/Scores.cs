@@ -17,12 +17,12 @@ namespace GameFoundation
   public class Scores
   {
     private const bool parentKeywords = false;
-    private const int parentKeywords = 999999999;
+    private const int parentKeywordsInt = 999999999;
     private const bool currentUri = false;
-    private const double parentKeywords = 200.0;
+    private const double parentKeywordsDouble = 200.0;
     private const bool filterID = false;
-    private const double currentUri = 200.0;
-    private const float parentKeywords = 0.8f;
+    private const double currentUriDouble = 200.0;
+    private const float parentKeywordsFloat = 0.8f;
     public static Scores Instance;
     [DataMember]
     public TimeElapsedHandler increaseScoresHandler;
@@ -30,9 +30,9 @@ namespace GameFoundation
     public TimeElapsedHandler decreaseScoresHandler;
     [DataMember]
     public int Points;
-    private StringBuilder parentKeywords;
-    private int currentUri;
-    private Vector2 parentKeywords;
+    private StringBuilder parentKeywordsStringBuilder;
+    private int currentUriInt;
+    private Vector2 parentKeywordsVector2;
 
     private Scores()
     {
@@ -125,8 +125,9 @@ label_5:
 
     public void Update(double elapsedGameTimeMs)
     {
-      this.parentKeywords.Remove(EditorService.DisconnectProject(3271).Length, this.parentKeywords.Length - EditorService.DisconnectProject(3271).Length);
-      this.parentKeywords.Concat(this.Points);
+      this.parentKeywordsStringBuilder.Remove(EditorService.DisconnectProject(3271).Length, 
+          this.parentKeywordsStringBuilder.Length - EditorService.DisconnectProject(3271).Length);
+      this.parentKeywordsStringBuilder.Concat(this.Points);
     }
 
     public void Draw()

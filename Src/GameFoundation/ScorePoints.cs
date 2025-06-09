@@ -120,14 +120,14 @@ label_5:
       return new KeyValuePair<DateTime, int>(DateTime.Now, ReferenceInvoker.DisconnectProject(2661));
     }
 
-    internal void DisconnectProject()
+    /*internal void DisconnectProject()
     {
       if (this.SucessfullySentToServer || ClientContext.DisconnectProject(this.parentKeywords, DateTime.Now.AddMinutes(ReferenceInvoker.DisconnectProject(2665))))
         return;
       this.SucessfullySentToServer = ReferenceInvoker.DisconnectProject(2673) != 0;
-    }
+    }*/
 
-    internal void DisposeDrive()
+    /*internal void DisposeDrive()
     {
       if (this.SucessfullySentToServer)
       {
@@ -146,7 +146,7 @@ label_1:
       }
       else
         this.parentKeywords = DateTime.MinValue;
-    }
+    }*/
 
     internal void DisconnectProject(int _param1)
     {

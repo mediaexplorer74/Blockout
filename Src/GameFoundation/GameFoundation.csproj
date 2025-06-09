@@ -126,6 +126,9 @@
     <Compile Include="ActivatorSettings.cs" />
     <Compile Include="ActivityAttribute.cs" />
     <Compile Include="ActivityTable.cs" />
+    <Compile Include="AdControl.cs" />
+    <Compile Include="AdController.cs" />
+    <Compile Include="AdInstance.cs" />
     <Compile Include="AssemblyAttribute.cs" />
     <Compile Include="AssemblyCollection.cs" />
     <Compile Include="AssemblyInfo.cs" />
@@ -144,7 +147,6 @@
     <Compile Include="ChallangeBlock.cs" />
     <Compile Include="ChallangeBlockTypes.cs" />
     <Compile Include="ChallangeLevels.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="ClientContext.cs" />
     <Compile Include="ClientQueue.cs" />
     <Compile Include="ColorTextures.cs" />

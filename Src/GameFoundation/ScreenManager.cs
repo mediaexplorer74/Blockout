@@ -581,7 +581,7 @@ label_27:
       GameplayScreenBase.Instance.PlaySound();
     }
 
-    internal bool DisconnectProject()
+    /*internal bool DisconnectProject()
     {
       GameScreen[] array = this.parentKeywords.ToArray();
       if ((int) ImageTable.DisconnectProject(array) != ReferenceInvoker.DisconnectProject(3253))
@@ -602,6 +602,6 @@ label_1:
       }
       else
         return ProjectList.DisconnectProject((object) array[ReferenceInvoker.DisconnectProject(3261)]) != null ? ReferenceInvoker.DisconnectProject(3265) != 0 : ReferenceInvoker.DisconnectProject(3269) != 0;
-    }
+    }*/
   }
 }

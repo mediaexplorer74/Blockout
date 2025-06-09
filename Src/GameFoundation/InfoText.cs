@@ -14,15 +14,16 @@ namespace GameFoundation
   public class InfoText : DrawableGameComponent
   {
     private const int parentKeywords = 20;
-    private List<IInfoTextElement> parentKeywords;
-    private SpriteFont parentKeywords;
-    private Point parentKeywords = new Point(ReferenceInvoker.DisconnectProject(5421), ReferenceInvoker.DisconnectProject(5425));
+    private List<IInfoTextElement> parentKeywordsList;
+    private SpriteFont parentKeywordsSpriteFont;
+    private Point parentKeywordsPoint = new Point(ReferenceInvoker.DisconnectProject(5421), 
+        ReferenceInvoker.DisconnectProject(5425));
 
     public InfoText(GameBase game)
       : base((Game) game)
     {
-      this.parentKeywords = new List<IInfoTextElement>();
-      this.parentKeywords.Y += ReferenceInvoker.DisconnectProject(5429);
+      this.parentKeywordsList = new List<IInfoTextElement>();
+      this.parentKeywordsPoint.Y += ReferenceInvoker.DisconnectProject(5429);
     }
 
     protected override void LoadContent() => base.LoadContent();
@@ -31,6 +32,6 @@ namespace GameFoundation
 
     public override void Draw(GameTime gameTime) => base.Draw(gameTime);
 
-    public void AddElement(IInfoTextElement element) => this.parentKeywords.Add(element);
+    public void AddElement(IInfoTextElement element) => this.parentKeywordsList.Add(element);
   }
 }

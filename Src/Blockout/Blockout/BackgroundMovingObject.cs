@@ -4,7 +4,7 @@
 // MVID: A5FFAAE6-A6F2-4299-B64C-2405C1773121
 // *************************************************************
 
-//using GameFoundation;
+using GameFoundation;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using System;

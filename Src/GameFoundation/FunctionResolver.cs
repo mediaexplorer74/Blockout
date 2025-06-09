@@ -4,6 +4,7 @@
 // MVID: 92FD7834-EF64-4872-85C6-A525AB8BDDBE
 // *************************************************************
 
+using GameFoundation.GameFoundation;
 using System;
 using System.Globalization;
 using Windows.ApplicationModel;
@@ -44,7 +45,7 @@ namespace GameFoundation
       FunctionResolver.parentKeywords = ReferenceInvoker.DisconnectProject(2133) != 0;
     }
 
-    private static string DisconnectProject()
+    /*private static string DisconnectProject()
     {
       string contentForFile = PlatformLocalStorage.LoadTextFromFile(EditorService.DisconnectProject(1853));
       if (string.IsNullOrEmpty(contentForFile))
@@ -80,7 +81,7 @@ label_5:
         }
       }
       return contentForFile;
-    }
+    }*/
 
     [Obsolete("Not recommended as the full hardware id will change even with attaching a docking station.", true)]
     private static string DisposeDrive()

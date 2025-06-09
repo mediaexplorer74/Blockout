@@ -37,7 +37,7 @@ namespace GameFoundation
       return new Vector2((float) GameBase.ScreenWidth / (float) GameBase.Instance.Window.ClientBounds.Width, (float) GameBase.ScreenHeight / height);
     }
 
-    internal void DisconnectProject()
+    /*internal void DisconnectProject()
     {
       Rectangle handyCenteredDrawPos = GameBase.Instance.GetHandyCenteredDrawPos();
       this.LastGamePadState = this.CurrentGamePadState;
@@ -128,7 +128,7 @@ label_16:
         while (TouchPanel.IsGestureAvailable)
           TouchPanel.ReadGesture();
       }
-    }
+    }*/
 
     public bool IsNewButtonPress(Buttons button)
     {

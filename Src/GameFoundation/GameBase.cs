@@ -4,6 +4,7 @@
 // MVID: 92FD7834-EF64-4872-85C6-A525AB8BDDBE
 // *************************************************************
 
+using GameFoundation.GameFoundation;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Media;
@@ -20,9 +21,9 @@ namespace GameFoundation
     private const string currentUri = "GameBase\\GameSettings.dat";
     private const string filterID = "GameBase\\GameSettings.bak";
     public const bool ShowDebugInfoText = false;
-    private const bool parentKeywords = true;
+    private const bool parentKeywordsBool = true;
     public const bool IsPortraitGraphics = true;
-    private const double parentKeywords = 1000.0;
+    private const double parentKeywordsDouble = 1000.0;
     public const bool HasGameSound = false;
     public static GameBase Instance;
     public Point ScreenBackBufferDimensions;
@@ -30,20 +31,20 @@ namespace GameFoundation
     public GraphicsDeviceManager Graphics;
     public SpriteBatch SpriteBatch;
     public GameSettings GameSettings;
-    private DateTime parentKeywords;
-    private DateTime currentUri;
-    private bool currentUri;
-    private bool filterID;
-    private bool parentCancel;
-    private Texture2D parentKeywords;
-    private Rectangle parentKeywords;
-    private DataHandler parentKeywords;
-    private Texture2D currentUri;
-    private RenderTarget2D parentKeywords;
+    private DateTime parentKeywordsDateTime;
+    private DateTime currentUriDateTime;
+    private bool currentUriBool;
+    private bool filterIDBool;
+    private bool parentCancelBool;
+    private Texture2D parentKeywordsTexture2D;
+    private Rectangle parentKeywordsRectangle;
+    private DataHandler parentKeywordsDataHandler;
+    private Texture2D currentUriTexture2D;
+    private RenderTarget2D parentKeywordsRenderTarget2D;
 
     public GameBase()
     {
-      this.currentUri = ReferenceInvoker.DisconnectProject(368) != 0;
+      this.currentUriBool = ReferenceInvoker.DisconnectProject(368) != 0;
       GameBase.Instance = this;
       this.Content.RootDirectory = EditorService.DisconnectProject(510);
       this.Graphics = new GraphicsDeviceManager((Game) this);
@@ -60,7 +61,10 @@ namespace GameFoundation
     {
       if (!MediaPlayer.GameHasControl)
         return;
-      MediaPlayer.Volume = MathHelper.Clamp((float) (Math.Pow((double) this.GameSettings.MusicVolume, ReferenceInvoker.DisconnectProject(88)) / ReferenceInvoker.DisconnectProject(96)), ReferenceInvoker.DisconnectProject(104), ReferenceInvoker.DisconnectProject(108));
+      MediaPlayer.Volume = MathHelper.Clamp((float)
+          (Math.Pow((double) this.GameSettings.MusicVolume, 
+          ReferenceInvoker.DisconnectProject(88)) / ReferenceInvoker.DisconnectProject(96)), 
+          ReferenceInvoker.DisconnectProject(104), ReferenceInvoker.DisconnectProject(108));
     }
 
     public void UpdateMusicIsOn()
@@ -77,8 +81,7 @@ label_1:
             default:
               if (false)
               {
-                // ISSUE: method reference
-                RuntimeMethodHandle runtimeMethodHandle = __methodref (GameBase.UpdateMusicIsOn);
+                this.UpdateMusicIsOn();
               }
               MediaPlayer.IsMuted = ReferenceInvoker.DisconnectProject(112) != 0;
               if (MediaPlayer.State == (MediaState) ReferenceInvoker.DisconnectProject(116))
@@ -105,20 +108,22 @@ label_5:
     protected override sealed void Initialize()
     {
       base.Initialize();
-      this.parentKeywords = this.Content.Load<Texture2D>(EditorService.DisconnectProject(163));
+      this.parentKeywordsTexture2D = 
+                this.Content.Load<Texture2D>(EditorService.DisconnectProject(163));
       this.SpriteBatch = new SpriteBatch(this.GraphicsDevice);
       this.SpriteBatch.Begin();
-      this.SpriteBatch.Draw(this.parentKeywords, this.parentKeywords, Color.White);
+      this.SpriteBatch.Draw(this.parentKeywordsTexture2D, 
+          this.parentKeywordsRectangle, Color.White);
       this.SpriteBatch.End();
       this.GraphicsDevice.Present();
-      this.currentUri = DateTime.Now;
-      this.parentCancel = ReferenceInvoker.DisconnectProject(124) != 0;
+      this.currentUriDateTime = DateTime.Now;
+      this.parentCancelBool = ReferenceInvoker.DisconnectProject(124) != 0;
       this.DisconnectProject();
     }
 
     private void DisconnectProject()
     {
-      this.filterID = ReferenceInvoker.DisconnectProject(128) != 0;
+      this.filterIDBool = ReferenceInvoker.DisconnectProject(128) != 0;
       bool flag1;
       this.DisconnectProject(out flag1);
       try
@@ -133,8 +138,7 @@ label_2:
             default:
               if (false)
               {
-                // ISSUE: method reference
-                RuntimeMethodHandle runtimeMethodHandle = __methodref (GameBase.DisconnectProject);
+                this.DisconnectProject();
               }
               MediaPlayer.IsMuted = ReferenceInvoker.DisconnectProject(132) != 0;
               break;
@@ -142,7 +146,8 @@ label_2:
         }
         GameScreen[] screens = ScreenManager.Instance.GetScreens();
         bool flag2 = ReferenceInvoker.DisconnectProject(136) != 0;
-        for (int index = (int) ImageTable.DisconnectProject(screens) - ReferenceInvoker.DisconnectProject(140); index >= ReferenceInvoker.DisconnectProject(152); index -= ReferenceInvoker.DisconnectProject(148))
+        for (int index = (int) ImageTable.DisconnectProject(screens) 
+                    - ReferenceInvoker.DisconnectProject(140); index >= ReferenceInvoker.DisconnectProject(152); index -= ReferenceInvoker.DisconnectProject(148))
         {
           if (ProjectList.DisconnectProject((object) screens[index]) == null)
           {
@@ -211,7 +216,9 @@ label_21:
       catch
       {
       }
-      while (TimeSpan.FromTicks(DateTime.Now.Ticks - this.currentUri.Ticks).TotalMilliseconds < ReferenceInvoker.DisconnectProject(164))
+      while (TimeSpan.FromTicks(DateTime.Now.Ticks 
+          - this.currentUriDateTime.Ticks).TotalMilliseconds 
+          < ReferenceInvoker.DisconnectProject(164))
         PlatformHelper.Sleep(ReferenceInvoker.DisconnectProject(160));
 label_26:
       switch (2)
@@ -236,7 +243,8 @@ label_30:
                     case 0:
                       goto label_30;
                     default:
-                      if ((int) ImageTable.DisconnectProject(ScreenManager.Instance.GetScreens()) == ReferenceInvoker.DisconnectProject(172))
+                      if ((int) ImageTable.DisconnectProject(
+                          ScreenManager.Instance.GetScreens()) == ReferenceInvoker.DisconnectProject(172))
                       {
 label_32:
                         switch (5)
@@ -244,7 +252,8 @@ label_32:
                           case 0:
                             goto label_32;
                           default:
-                            GameplayScreenBase.Instance.SwitchToPauseScreen(ReferenceInvoker.DisconnectProject(176) != 0);
+                            GameplayScreenBase.Instance.SwitchToPauseScreen(
+                                ReferenceInvoker.DisconnectProject(176) != 0);
                             break;
                         }
                       }
@@ -258,15 +267,15 @@ label_32:
                 break;
             }
           }
-          this.currentUri = ReferenceInvoker.DisconnectProject(180) != 0;
-          this.filterID = ReferenceInvoker.DisconnectProject(184) != 0;
+          this.currentUriBool = ReferenceInvoker.DisconnectProject(180) != 0;
+          this.filterIDBool = ReferenceInvoker.DisconnectProject(184) != 0;
           break;
       }
     }
 
     private void DisconnectProject(out bool _param1)
     {
-      this.parentKeywords = new DataHandler();
+      this.parentKeywordsDataHandler = new DataHandler();
       if (!this.DeserializeOnlineCommunication())
         OnlineCommunications.Init();
       if (PlatformHelper.DisconnectProject())
@@ -279,8 +288,7 @@ label_3:
           default:
             if (false)
             {
-              // ISSUE: method reference
-              RuntimeMethodHandle runtimeMethodHandle = __methodref (GameBase.DisconnectProject);
+              this.DisconnectProject();
             }
             OnlineCommunications.Instance.RegisterUsage();
             OnlineCommunications.Instance.GetTop6Scores();
@@ -315,7 +323,7 @@ label_11:
         }
       }
       PlatformHelper.DisposeDrive();
-      AdController.Init();
+      //AdController.Init();
       GameData.Instance.DisposeDrive();
       bool flag1 = ReferenceInvoker.DisconnectProject(188) != 0;
       if (ScreenManager.Instance.DeserializeState())
@@ -410,8 +418,7 @@ label_1:
           default:
             if (false)
             {
-              // ISSUE: method reference
-              RuntimeMethodHandle runtimeMethodHandle = __methodref (GameBase.DisconnectProject);
+              this.DisconnectProject();
             }
             GameBase.Instance.ResetElapsedTime();
             GameplayScreenBase.Instance.IsPaused = ReferenceInvoker.DisconnectProject(212) != 0;
@@ -488,8 +495,7 @@ label_1:
           default:
             if (false)
             {
-              // ISSUE: method reference
-              RuntimeMethodHandle runtimeMethodHandle = __methodref (GameBase.OnDeactivated);
+              this.OnDeactivated(default,default);
             }
             instance.IsPaused = ReferenceInvoker.DisconnectProject(220) != 0;
             break;
@@ -521,7 +527,7 @@ label_6:
     protected override void OnExiting(object sender, EventArgs args)
     {
       this.DisposeDrive();
-      if (this.parentKeywords != null)
+      if (this.parentKeywordsDataHandler != null)
       {
 label_1:
         switch (5)
@@ -531,10 +537,9 @@ label_1:
           default:
             if (false)
             {
-              // ISSUE: method reference
-              RuntimeMethodHandle runtimeMethodHandle = __methodref (GameBase.OnExiting);
+              this.OnExiting(default,default);
             }
-            this.parentKeywords.Unload();
+            this.parentKeywordsDataHandler.Unload();
             break;
         }
       }
@@ -556,8 +561,7 @@ label_1:
         default:
           if (false)
           {
-            // ISSUE: method reference
-            RuntimeMethodHandle runtimeMethodHandle = __methodref (GameBase.DisposeDrive);
+            this.DisposeDrive();
           }
           instance.SerializeState();
           break;
@@ -571,16 +575,22 @@ label_1:
       _param1 = ReferenceInvoker.DisconnectProject(232) != 0;
       if (_param1)
       {
-        this.Graphics.SupportedOrientations = (DisplayOrientation) ReferenceInvoker.DisconnectProject(236);
-        this.parentKeywords = new Rectangle(ReferenceInvoker.DisconnectProject(240), ReferenceInvoker.DisconnectProject(244), num1, num2);
+        this.Graphics.SupportedOrientations =
+                    (DisplayOrientation) ReferenceInvoker.DisconnectProject(236);
+        this.parentKeywordsRectangle 
+                    = new Rectangle(ReferenceInvoker.DisconnectProject(240), 
+                    ReferenceInvoker.DisconnectProject(244), num1, num2);
         this.ScreenBackBufferDimensions = new Point(num1, num2);
         this.Graphics.PreferredBackBufferWidth = num1;
         this.Graphics.PreferredBackBufferHeight = num2;
       }
       else
       {
-        this.Graphics.SupportedOrientations = (DisplayOrientation) ReferenceInvoker.DisconnectProject(248);
-        this.parentKeywords = new Rectangle(ReferenceInvoker.DisconnectProject(252), ReferenceInvoker.DisconnectProject(256), num1, num2);
+        this.Graphics.SupportedOrientations = 
+                    (DisplayOrientation) ReferenceInvoker.DisconnectProject(248);
+        this.parentKeywordsRectangle = 
+                    new Rectangle(ReferenceInvoker.DisconnectProject(252), 
+                    ReferenceInvoker.DisconnectProject(256), num1, num2);
         this.ScreenBackBufferDimensions = new Point(num1, num2);
         this.Graphics.PreferredBackBufferWidth = num1;
         this.Graphics.PreferredBackBufferHeight = num2;
@@ -591,12 +601,14 @@ label_1:
     {
       base.LoadContent();
       this.ListQueue();
-      this.currentUri = this.Content.Load<Texture2D>(EditorService.DisconnectProject(194));
+      this.currentUriTexture2D = this.Content.Load<Texture2D>(EditorService.DisconnectProject(194));
     }
 
     private void ListQueue()
     {
-      this.parentKeywords = new RenderTarget2D(this.GraphicsDevice, ReferenceInvoker.DisconnectProject(260), ReferenceInvoker.DisconnectProject(264));
+      this.parentKeywordsRenderTarget2D = 
+                new RenderTarget2D(this.GraphicsDevice, ReferenceInvoker.DisconnectProject(260), 
+                ReferenceInvoker.DisconnectProject(264));
     }
 
     private void DisposeDrive(object _param1, EventArgs _param2)
@@ -611,7 +623,7 @@ label_1:
 
     protected override void Update(GameTime gameTime)
     {
-      if (this.currentUri)
+      if (this.currentUriBool)
       {
         if (PlatformHelper.DisconnectProject())
         {
@@ -623,8 +635,7 @@ label_2:
             default:
               if (false)
               {
-                // ISSUE: method reference
-                RuntimeMethodHandle runtimeMethodHandle = __methodref (GameBase.Update);
+                this.Update(gameTime);
               }
               this.SuppressDraw();
               break;
@@ -632,7 +643,7 @@ label_2:
         }
         else
         {
-          if (!this.parentCancel)
+          if (!this.parentCancelBool)
             return;
 label_7:
           switch (1)
@@ -640,7 +651,7 @@ label_7:
             case 0:
               goto label_7;
             default:
-              if (this.filterID)
+              if (this.filterIDBool)
                 break;
 label_9:
               switch (4)
@@ -648,7 +659,7 @@ label_9:
                 case 0:
                   goto label_9;
                 default:
-                  this.currentUri = DateTime.Now;
+                  this.currentUriDateTime = DateTime.Now;
                   this.DisconnectProject();
                   return;
               }
@@ -666,7 +677,7 @@ label_9:
 
     protected override void Draw(GameTime gameTime)
     {
-      if (this.currentUri)
+      if (this.currentUriBool)
       {
 label_1:
         switch (4)
@@ -676,13 +687,13 @@ label_1:
           default:
             if (false)
             {
-              // ISSUE: method reference
-              RuntimeMethodHandle runtimeMethodHandle = __methodref (GameBase.Draw);
+              this.Draw();
             }
             this.SpriteBatch.Begin();
-            this.SpriteBatch.Draw(this.parentKeywords, this.parentKeywords, Color.White);
+            this.SpriteBatch.Draw(this.parentKeywordsTexture2D, 
+                this.parentKeywordsRectangle, Color.White);
             this.SpriteBatch.End();
-            this.parentCancel = ReferenceInvoker.DisconnectProject(268) != 0;
+            this.parentCancelBool = ReferenceInvoker.DisconnectProject(268) != 0;
             break;
         }
       }
@@ -690,7 +701,10 @@ label_1:
       {
         int preferredBackBufferWidth = this.Graphics.PreferredBackBufferWidth;
         int backBufferHeight = this.Graphics.PreferredBackBufferHeight;
-        if (PlatformHelper.DisconnectProject() == (PlatformHelper.ScreenModeTypes) ReferenceInvoker.DisconnectProject(272))
+
+        //TODO
+        if (true)//(PlatformHelper.DisconnectProject() 
+           //         == (PlatformHelper.ScreenModeTypes) ReferenceInvoker.DisconnectProject(272))
         {
 label_6:
           switch (7)
@@ -707,22 +721,28 @@ label_6:
         }
         else
         {
-          if (this.parentKeywords == null)
+          if (this.parentKeywordsRenderTarget2D == null)
             this.ListQueue();
-          this.GraphicsDevice.SetRenderTarget(this.parentKeywords);
+          this.GraphicsDevice.SetRenderTarget(this.parentKeywordsRenderTarget2D);
           this.Graphics.GraphicsDevice.Clear(Color.Transparent);
           base.Draw(gameTime);
           this.GraphicsDevice.SetRenderTarget(AssemblyAttribute.parentKeywords);
           this.SpriteBatch.Begin();
-          this.SpriteBatch.Draw(this.currentUri, new Rectangle(ReferenceInvoker.DisconnectProject(276), ReferenceInvoker.DisconnectProject(280), this.Graphics.PreferredBackBufferWidth, this.Graphics.PreferredBackBufferHeight), Color.White);
-          this.SpriteBatch.Draw((Texture2D) this.parentKeywords, this.GetHandyCenteredDrawPos(), Color.White);
+          this.SpriteBatch.Draw(this.currentUriTexture2D, new Rectangle(ReferenceInvoker.DisconnectProject(276), ReferenceInvoker.DisconnectProject(280), this.Graphics.PreferredBackBufferWidth, this.Graphics.PreferredBackBufferHeight), Color.White);
+          this.SpriteBatch.Draw((Texture2D) this.parentKeywordsRenderTarget2D, 
+              this.GetHandyCenteredDrawPos(), Color.White);
           this.DrawNormalScaledStuff();
           this.SpriteBatch.End();
         }
       }
     }
 
-    public Rectangle GetHandyCenteredDrawPos()
+        private void Draw()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Rectangle GetHandyCenteredDrawPos()
     {
       int backBufferHeight = this.Graphics.PreferredBackBufferHeight;
       int width = (int) (ReferenceInvoker.DisconnectProject(284) * (double) backBufferHeight);
@@ -741,8 +761,7 @@ label_1:
           default:
             if (false)
             {
-              // ISSUE: method reference
-              RuntimeMethodHandle runtimeMethodHandle = __methodref (GameBase.SerializeState);
+              this.SerializeState();
             }
             int num = ReferenceInvoker.DisconnectProject(304);
             bool flag = ReferenceInvoker.DisconnectProject(308) != 0;
@@ -861,8 +880,7 @@ label_1:
           default:
             if (false)
             {
-              // ISSUE: method reference
-              RuntimeMethodHandle runtimeMethodHandle = __methodref (GameBase.SerializeOnlineCommunication);
+              this.SerializeOnlineCommunication();
             }
             PlatformLocalStorage.DeleteFiles(EditorService.DisconnectProject(384));
             break;
@@ -888,8 +906,7 @@ label_1:
         default:
           if (false)
           {
-            // ISSUE: method reference
-            RuntimeMethodHandle runtimeMethodHandle = __methodref (GameBase.DeserializeState);
+            this.DeserializeState();
           }
           bool flag = ReferenceInvoker.DisconnectProject(336) != 0;
           Type typeFromHandle = Type.GetTypeFromHandle(GroupToken.DisconnectProject());
@@ -953,8 +970,7 @@ label_1:
           default:
             if (false)
             {
-              // ISSUE: method reference
-              RuntimeMethodHandle runtimeMethodHandle = __methodref (GameBase.DeserializeOnlineCommunication);
+              this.DeserializeOnlineCommunication();
             }
             if (PlatformLocalStorage.FileExists(EditorService.DisconnectProject(423)))
             {

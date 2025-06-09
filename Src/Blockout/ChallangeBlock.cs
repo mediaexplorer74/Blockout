@@ -8,11 +8,11 @@ using System;
 
 namespace Blockout
 {
-    internal class ChallangeBlock
+    public class ChallangeBlock
     {
         public static explicit operator ChallangeBlock(int v)
         {
-            throw new NotImplementedException();
+            //
         }
     }
 }

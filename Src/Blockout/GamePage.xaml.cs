@@ -13,8 +13,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
-
+/*
 namespace Blockout
 {
     /// <summary>
@@ -34,8 +33,9 @@ namespace Blockout
         }
     }
 }
+*/
 
-/*
+
  // *************************************************************
 // Type: BlockoutRt.GamePage
 // Assembly: Blockout, Version=1.2.0.0, Culture=neutral, PublicKeyToken=null
@@ -67,9 +67,9 @@ namespace BlockoutRt
     private readonly Game1 parentKeywords;
     private BookmarkManager parentKeywords;
     [GeneratedCode("Microsoft.Windows.UI.Xaml.Build.Tasks", " 4.0.0.0")]
-    private Grid parentKeywords;
+    private Grid parentKeywordsGrid;
     [GeneratedCode("Microsoft.Windows.UI.Xaml.Build.Tasks", " 4.0.0.0")]
-    private bool parentKeywords;
+    private bool parentKeywordsBool;
 
     public GamePage(string launchArguments)
     {
@@ -201,6 +201,7 @@ label_1:
       ((ICollection<UIElement>) ((Panel) this.parentKeywords).Children).Add((UIElement) _param1);
     }
 
+    /*
     [DebuggerNonUserCode]
     [GeneratedCode("Microsoft.Windows.UI.Xaml.Build.Tasks", " 4.0.0.0")]
     public void InitializeComponent()
@@ -222,9 +223,9 @@ label_1:
       }
       else
       {
-        this.parentKeywords = ClientTree.DisconnectProject(1984789) != 0;
+        this.parentKeywordsBool = ClientTree.DisconnectProject(1984789) != 0;
         Application.LoadComponent((object) this, new Uri(DatabaseLoader.DisconnectProject(13394)), (ComponentResourceLocation) ClientTree.DisconnectProject(1984793));
-        this.parentKeywords = DiskEventArgs.DisconnectProject(((FrameworkElement) this).FindName(DatabaseLoader.DisconnectProject(13443)));
+        this.parentKeywordsGrid = DiskEventArgs.DisconnectProject(((FrameworkElement) this).FindName(DatabaseLoader.DisconnectProject(13443)));
       }
     }
 
@@ -232,9 +233,9 @@ label_1:
     [DebuggerNonUserCode]
     public void Connect(int connectionId, object target)
     {
-      this.parentKeywords = ClientTree.DisconnectProject(1984797) != 0;
-    }
+      this.parentKeywordsBool = ClientTree.DisconnectProject(1984797) != 0;
+    }*/
   }
 }
 
- */
+

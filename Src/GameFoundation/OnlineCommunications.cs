@@ -24,7 +24,7 @@ namespace GameFoundation
     private const int parentKeywords = 20;
     public const bool useTimelyBasedScores = false;
     public const bool useMultipleScores = false;
-    private const double parentKeywords = 10000.0;
+    private const double parentKeywordsDouble = 10000.0;
     [DataMember]
     public DateTime MultipleCallProtectionGameInstalledLastCall;
     [DataMember]
@@ -37,7 +37,7 @@ namespace GameFoundation
     public int[] OurScores;
     [DataMember]
     public string[] AdsPreferedReceived = RegistryInvoker.DisconnectProject(ReferenceInvoker.DisconnectProject(1657));
-    private static EventHandler parentKeywords;
+    private static EventHandler parentKeywordsEventHandler;
     private static EventHandler currentUri;
     public static OnlineCommunications Instance;
 
@@ -53,7 +53,7 @@ namespace GameFoundation
     {
       add
       {
-        EventHandler eventHandler1 = OnlineCommunications.parentKeywords;
+        EventHandler eventHandler1 = OnlineCommunications.parentKeywordsEventHandler;
         EventHandler eventHandler2;
         do
         {
@@ -513,7 +513,7 @@ label_8:
       }
     }
 
-    internal static string DisconnectProject(IAsyncResult _param0)
+    /*internal static string DisconnectProject(IAsyncResult _param0)
     {
       string str = ViewSet.parentKeywords;
       try
@@ -525,7 +525,7 @@ label_8:
       {
       }
       return str;
-    }
+    }*/
 
     private void DisposeDrive(IAsyncResult _param1)
     {

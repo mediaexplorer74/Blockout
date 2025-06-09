@@ -138,7 +138,7 @@ label_1:
       }
     }
 
-    private static Task<StorageFile> DisconnectProject(string _param0, StorageFolder _param1)
+    /*private static Task<StorageFile> DisconnectProject(string _param0, StorageFolder _param1)
     {
       // ISSUE: variable of a compiler-generated type
       PlatformLocalStorage.CommandSerializer stateMachine;
@@ -154,9 +154,9 @@ label_1:
       stateMachine.parentKeywords.Start<PlatformLocalStorage.CommandSerializer>(ref stateMachine);
       // ISSUE: reference to a compiler-generated field
       return stateMachine.parentKeywords.Task;
-    }
+    }*/
 
-    internal static string[] DisconnectProject(string _param0)
+    /*internal static string[] DisconnectProject(string _param0)
     {
       // ISSUE: object of a compiler-generated type is created
       // ISSUE: variable of a compiler-generated type
@@ -216,7 +216,7 @@ label_10:
         }
         return stringList.ToArray();
       }
-    }
+    }*/
 
     public static bool SerializeObjectToFile(string filename, object toSerialize)
     {
@@ -374,7 +374,7 @@ label_15:
       return stateMachine.parentKeywords.Task;
     }
 
-    private static Task<StorageFolder> DisposeDrive(string _param0, StorageFolder _param1)
+    /*private static Task<StorageFolder> DisposeDrive(string _param0, StorageFolder _param1)
     {
       // ISSUE: variable of a compiler-generated type
       PlatformLocalStorage.MenuItemFactory stateMachine;
@@ -390,24 +390,24 @@ label_15:
       stateMachine.parentKeywords.Start<PlatformLocalStorage.MenuItemFactory>(ref stateMachine);
       // ISSUE: reference to a compiler-generated field
       return stateMachine.parentKeywords.Task;
-    }
+    }*/
 
     private static Task<Stream> DisconnectProject(StorageFile _param0, bool _param1)
     {
       // ISSUE: variable of a compiler-generated type
       PlatformLocalStorage.ConnectionHelper stateMachine;
-      // ISSUE: reference to a compiler-generated field
-      stateMachine.parentKeywords = _param0;
-      // ISSUE: reference to a compiler-generated field
-      stateMachine.parentKeywords = _param1;
-      // ISSUE: reference to a compiler-generated field
-      stateMachine.parentKeywords = AsyncTaskMethodBuilder<Stream>.Create();
-      // ISSUE: reference to a compiler-generated field
-      stateMachine.parentKeywords = ReferenceInvoker.DisconnectProject(2285);
-      // ISSUE: reference to a compiler-generated field
-      stateMachine.parentKeywords.Start<PlatformLocalStorage.ConnectionHelper>(ref stateMachine);
-      // ISSUE: reference to a compiler-generated field
-      return stateMachine.parentKeywords.Task;
+            // ISSUE: reference to a compiler-generated field
+            //stateMachine.parentKeywords = _param0;
+            // ISSUE: reference to a compiler-generated field
+            //stateMachine.parentKeywords = _param1;
+            // ISSUE: reference to a compiler-generated field
+            //stateMachine.parentKeywords = AsyncTaskMethodBuilder<Stream>.Create();
+            // ISSUE: reference to a compiler-generated field
+            //stateMachine.parentKeywords = ReferenceInvoker.DisconnectProject(2285);
+            // ISSUE: reference to a compiler-generated field
+            //stateMachine.parentKeywords.Start<PlatformLocalStorage.ConnectionHelper>(ref stateMachine);
+            // ISSUE: reference to a compiler-generated field
+            return default;//stateMachine.parentKeywords.Task;
     }
 
     public static object DeserializeObjectFromFile(string filename, Type typeExpected)
@@ -619,7 +619,7 @@ label_18:
       return str;
     }
 
-    private static string DisconnectProject(string _param0)
+    /*private static string DisconnectProject(string _param0)
     {
       Func<Task<Stream>> func = ToolbarResolver.parentKeywords;
       // ISSUE: object of a compiler-generated type is created
@@ -674,7 +674,7 @@ label_10:
           }
         }
       }
-    }
+    }*/
 
     public static bool SaveTextToFile(string filename, string contentForFile)
     {
@@ -819,7 +819,7 @@ label_1:
       return stateMachine.parentKeywords.Task;
     }
 
-    private static void DisconnectProject(string _param0)
+    /*private static void DisconnectProject(string _param0)
     {
       // ISSUE: object of a compiler-generated type is created
       // ISSUE: variable of a compiler-generated type
@@ -895,7 +895,7 @@ label_14:
           }
         }
       }
-    }
+    }*/
 
     public static bool CreateDirectory(string directoryToCreate)
     {
@@ -929,7 +929,7 @@ label_1:
       }
     }
 
-    private static void DisposeDrive(string _param0)
+    /*private static void DisposeDrive(string _param0)
     {
       // ISSUE: object of a compiler-generated type is created
       // ISSUE: reference to a compiler-generated method
@@ -938,7 +938,7 @@ label_1:
         parentKeywords = _param0,
         parentKeywords = ApplicationData.Current.LocalFolder
       }.DisconnectProject));
-    }
+    }*/
 
     public static bool RequestAdditionalStorageIfNotEnough()
     {
@@ -1227,5 +1227,10 @@ label_5:
       // ISSUE: reference to a compiler-generated field
       return stateMachine.parentKeywords.Task;
     }
-  }
+
+        private class ConnectionHelper
+        {
+            internal StorageFile parentKeywords;
+        }
+    }
 }

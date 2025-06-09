@@ -272,7 +272,6 @@
     <Compile Include="Blockout\XmlFileContext.cs" />
     <Compile Include="Bounds.cs" />
     <Compile Include="ChallangeBlock.cs" />
-    <Compile Include="GameBase.cs" />
     <Compile Include="GameInstance.cs" />
     <Compile Include="GamePage.xaml.cs">
       <DependentUpon>GamePage.xaml</DependentUpon>
@@ -613,6 +612,12 @@
     <PackageReference Include="Newtonsoft.Json">
       <Version>13.0.3</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GameFoundation\GameFoundation.csproj">
+      <Project>{3799adc5-7a38-4ee2-8083-e8fe5e62c659}</Project>
+      <Name>GameFoundation</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>

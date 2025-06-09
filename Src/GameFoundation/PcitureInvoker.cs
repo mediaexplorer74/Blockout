@@ -167,8 +167,8 @@ label_5:
       return disposeDrive;
     }
 
-    [SpecialName]
-    internal static PcitureInvoker.NodeType get_DisconnectProject()
+    //[SpecialName]
+    /*internal static PcitureInvoker.NodeType get_DisconnectProject()
     {
       PcitureInvoker.NodeType disconnectProject = (PcitureInvoker.NodeType) ReferenceInvoker.DisconnectProject(2617);
       try
@@ -214,21 +214,21 @@ label_2:
       {
       }
       return disconnectProject;
-    }
+    }*/
 
-    [DllImport("kernel32.dll", EntryPoint = "GetNativeSystemInfo")]
-    public static extern void DisconnectProject([MarshalAs(UnmanagedType.Struct)] ref PcitureInvoker.AssistantSite _param0);
+    //[DllImport("kernel32.dll", EntryPoint = "GetNativeSystemInfo")]
+    //public static extern void DisconnectProject([MarshalAs(UnmanagedType.Struct)] ref PcitureInvoker.AssistantSite _param0);
 
-    [DllImport("kernel32", EntryPoint = "GetProcAddress", SetLastError = true)]
-    public static extern IntPtr DisconnectProject(IntPtr _param0, string _param1);
+    //[DllImport("kernel32", EntryPoint = "GetProcAddress", SetLastError = true)]
+    //public static extern IntPtr DisconnectProject(IntPtr _param0, string _param1);
 
-    [SpecialName]
-    internal static string get_DisposeDrive()
-    {
-      string empty = string.Empty;
-      new PcitureInvoker.StubList().parentKeywords = Marshal.SizeOf(typeof (PcitureInvoker.StubList));
-      return empty;
-    }
+    //[SpecialName]
+    //internal static string get_DisposeDrive()
+    //{
+    //  string empty = string.Empty;
+    //  new PcitureInvoker.StubList().parentKeywords = Marshal.SizeOf(typeof (PcitureInvoker.StubList));
+    //  return empty;
+    //}
 
     private static PcitureInvoker.DeviceSettings DisconnectProject()
     {

@@ -22,9 +22,9 @@ namespace GameFoundation
     public const int AdditionalMenuHitHorizontalMargin = 9;
     private const int parentKeywords = 140;
     private const int currentUri = 55;
-    private const float parentKeywords = 0.95f;
+    private const float parentKeywordsFloat = 0.95f;
     private const int filterID = 10;
-    private bool parentKeywords;
+    private bool parentKeywordsBool;
     [DataMember]
     public string menuTitle;
     [DataMember]
