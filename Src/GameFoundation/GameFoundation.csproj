@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3799ADC5-7A38-4EE2-8083-E8FE5E62C659}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GameFoundation</RootNamespace>
+    <AssemblyName>GameFoundation</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.19041.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.10240.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <PlatformTarget>ARM</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <PlatformTarget>ARM</PlatformTarget>
+    <OutputPath>bin\ARM\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM64'">
+    <PlatformTarget>ARM64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\ARM64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM64'">
+    <PlatformTarget>ARM64</PlatformTarget>
+    <OutputPath>bin\ARM64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <PlatformTarget>x64</PlatformTarget>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="ActionEventArgs.cs" />
+    <Compile Include="ActivatorProvider.cs" />
+    <Compile Include="ActivatorSettings.cs" />
+    <Compile Include="ActivityAttribute.cs" />
+    <Compile Include="ActivityTable.cs" />
+    <Compile Include="AssemblyAttribute.cs" />
+    <Compile Include="AssemblyCollection.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="AssemblyInfoAttribute.cs" />
+    <Compile Include="AssemblyScope.cs" />
+    <Compile Include="AssemblyStack.cs" />
+    <Compile Include="AssistantQueue.cs" />
+    <Compile Include="AssistantTable.cs" />
+    <Compile Include="AssistantType.cs" />
+    <Compile Include="BackgroundScreen.cs" />
+    <Compile Include="BitmapService.cs" />
+    <Compile Include="BitmapStack.cs" />
+    <Compile Include="BitmapStream.cs" />
+    <Compile Include="BookmarkFactory.cs" />
+    <Compile Include="BookmarkSite.cs" />
+    <Compile Include="ChallangeBlock.cs" />
+    <Compile Include="ChallangeBlockTypes.cs" />
+    <Compile Include="ChallangeLevels.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="ClientContext.cs" />
+    <Compile Include="ClientQueue.cs" />
+    <Compile Include="ColorTextures.cs" />
+    <Compile Include="ConfigStream.cs" />
+    <Compile Include="ConnectionType.cs" />
+    <Compile Include="ContextResolver.cs" />
+    <Compile Include="ContextToken.cs" />
+    <Compile Include="ControlSet.cs" />
+    <Compile Include="CreditsMenuScreen.cs" />
+    <Compile Include="DatabaseQueue.cs" />
+    <Compile Include="DataHandler.cs" />
+    <Compile Include="DeploymentSet.cs" />
+    <Compile Include="DeviceOptions.cs" />
+    <Compile Include="DeviceSite.cs" />
+    <Compile Include="DiskAttribute.cs" />
+    <Compile Include="DiskManager.cs" />
+    <Compile Include="DiskType.cs" />
+    <Compile Include="DomainDictionary.cs" />
+    <Compile Include="DomainEditor.cs" />
+    <Compile Include="DomainFactory.cs" />
+    <Compile Include="DomainResolver.cs" />
+    <Compile Include="DriveAttribute.cs" />
+    <Compile Include="EditorService.cs" />
+    <Compile Include="EmulatorTable.cs" />
+    <Compile Include="EnumHelper.cs" />
+    <Compile Include="FileList.cs" />
+    <Compile Include="Form.cs" />
+    <Compile Include="FormEventArgs.cs" />
+    <Compile Include="FormFactory.cs" />
+    <Compile Include="FormType.cs" />
+    <Compile Include="FrameRateCounter.cs" />
+    <Compile Include="FunctionCollection.cs" />
+    <Compile Include="FunctionFactory.cs" />
+    <Compile Include="FunctionQueue.cs" />
+    <Compile Include="FunctionResolver.cs" />
+    <Compile Include="GameBase.cs" />
+    <Compile Include="GameData.cs" />
+    <Compile Include="GameplayScreenBase.cs" />
+    <Compile Include="GameScreen.cs" />
+    <Compile Include="GameSettings.cs" />
+    <Compile Include="GroupEventArgs.cs" />
+    <Compile Include="GroupToken.cs" />
+    <Compile Include="GuiBase.cs" />
+    <Compile Include="HowToPlayMenuScreen.cs" />
+    <Compile Include="IconEditor.cs" />
+    <Compile Include="IconEventArgs.cs" />
+    <Compile Include="IconSite.cs" />
+    <Compile Include="IconStack.cs" />
+    <Compile Include="IInfoTextElement.cs" />
+    <Compile Include="ImageEditor.cs" />
+    <Compile Include="ImageTable.cs" />
+    <Compile Include="InfoText.cs" />
+    <Compile Include="InputState.cs" />
+    <Compile Include="IntersectionHelper.cs" />
+    <Compile Include="IUpdateableElement.cs" />
+    <Compile Include="LineDictionary.cs" />
+    <Compile Include="LineScope.cs" />
+    <Compile Include="LineSettings.cs" />
+    <Compile Include="ListExtension.cs" />
+    <Compile Include="LoadingScreen.cs" />
+    <Compile Include="MainMenuScreen.cs" />
+    <Compile Include="ManagedOneTimeAnimator.cs" />
+    <Compile Include="ManagedTimeLimitedBase.cs" />
+    <Compile Include="Managed\ImageLooper.cs" />
+    <Compile Include="Managed\ManagedTimeLimitedImage.cs" />
+    <Compile Include="MemoryInvoker.cs" />
+    <Compile Include="MemoryManager.cs" />
+    <Compile Include="MemoryUsage.cs" />
+    <Compile Include="MenuEntry.cs" />
+    <Compile Include="MenuEntryButton.cs" />
+    <Compile Include="MenuItemService.cs" />
+    <Compile Include="MenuLoader.cs" />
+    <Compile Include="MenuLocation.cs" />
+    <Compile Include="MenuOptions.cs" />
+    <Compile Include="MenuScreen.cs" />
+    <Compile Include="MenuStream.cs" />
+    <Compile Include="MessageBoxScreen.cs" />
+    <Compile Include="MethodTree.cs" />
+    <Compile Include="MsAdOnline.cs" />
+    <Compile Include="NetworkCollection.cs" />
+    <Compile Include="NetworkStack.cs" />
+    <Compile Include="NetworkToken.cs" />
+    <Compile Include="NodeCollection.cs" />
+    <Compile Include="OnlineCommunications.cs" />
+    <Compile Include="OptionsAttribute.cs" />
+    <Compile Include="OptionsMenuScreen.cs" />
+    <Compile Include="OptionsSet.cs" />
+    <Compile Include="OutlineInvoker.cs" />
+    <Compile Include="PackageOptions.cs" />
+    <Compile Include="PackageSet.cs" />
+    <Compile Include="PackageSettings.cs" />
+    <Compile Include="PageDictionary.cs" />
+    <Compile Include="PageQueue.cs" />
+    <Compile Include="PaneInvoker.cs" />
+    <Compile Include="PartitionManager.cs" />
+    <Compile Include="PartitionSite.cs" />
+    <Compile Include="PathInvoker.cs" />
+    <Compile Include="PathLoader.cs" />
+    <Compile Include="PathProvider.cs" />
+    <Compile Include="PathStream.cs" />
+    <Compile Include="PauseMenuScreen.cs" />
+    <Compile Include="PcitureInvoker.cs" />
+    <Compile Include="PcitureService.cs" />
+    <Compile Include="PcitureStream.cs" />
+    <Compile Include="PlatformEncryption.cs" />
+    <Compile Include="PlatformHelper.cs" />
+    <Compile Include="PlatformInheritBase.cs" />
+    <Compile Include="PlatformLocalStorage.cs" />
+    <Compile Include="PlayerBase.cs" />
+    <Compile Include="PluginQueue.cs" />
+    <Compile Include="ProjectAttribute.cs" />
+    <Compile Include="ProjectList.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueueManager.cs" />
+    <Compile Include="QueueSet.cs" />
+    <Compile Include="RandomManager.cs" />
+    <Compile Include="RectangleExtension.cs" />
+    <Compile Include="ReferenceInvoker.cs" />
+    <Compile Include="RegistryInvoker.cs" />
+    <Compile Include="RegistryScope.cs" />
+    <Compile Include="RegistrySerializer.cs" />
+    <Compile Include="RegistryService.cs" />
+    <Compile Include="RegistryType.cs" />
+    <Compile Include="RelativeClickEventArg.cs" />
+    <Compile Include="ResourceConverter.cs" />
+    <Compile Include="ResourceOptions.cs" />
+    <Compile Include="ResourceSerializer.cs" />
+    <Compile Include="RunsSlowWatcher.cs" />
+    <Compile Include="ScoreMenuScreen.cs" />
+    <Compile Include="ScorePoints.cs" />
+    <Compile Include="Scores.cs" />
+    <Compile Include="ScreenManager.cs" />
+    <Compile Include="ScreenState.cs" />
+    <Compile Include="SelectionFactory.cs" />
+    <Compile Include="SelectionType.cs" />
+    <Compile Include="ServerService.cs" />
+    <Compile Include="SlowdownCounter.cs" />
+    <Compile Include="SolutionTable.cs" />
+    <Compile Include="StoreDesigner.cs" />
+    <Compile Include="StreamSettings.cs" />
+    <Compile Include="StringBuilderExtensions.cs" />
+    <Compile Include="StringLinewiseReadHelper.cs" />
+    <Compile Include="StubLayout.cs" />
+    <Compile Include="StubQueue.cs" />
+    <Compile Include="SymbolLayout.cs" />
+    <Compile Include="SymbolSerializer.cs" />
+    <Compile Include="TemplateConverter.cs" />
+    <Compile Include="TextFileSet.cs" />
+    <Compile Include="TextureHelper.cs" />
+    <Compile Include="TimeElapsedHandler.cs" />
+    <Compile Include="TimerEventless.cs" />
+    <Compile Include="ToolbarInfo.cs" />
+    <Compile Include="ToolbarResolver.cs" />
+    <Compile Include="TreeNodeLayout.cs" />
+    <Compile Include="UpdatePerformance.cs" />
+    <Compile Include="VectorConverter.cs" />
+    <Compile Include="VectorService.cs" />
+    <Compile Include="ViewSet.cs" />
+    <Compile Include="WindowConverter.cs" />
+    <Compile Include="WindowOptions.cs" />
+    <Compile Include="WindowSite.cs" />
+    <Compile Include="XmlFileLoader.cs" />
+    <Compile Include="XmlFileSerializer.cs" />
+    <EmbeddedResource Include="Properties\GameFoundation.rd.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.2.8</Version>
+    </PackageReference>
+    <PackageReference Include="MonoGame.Framework.WindowsUniversal">
+      <Version>3.7.1.189</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.3</Version>
+    </PackageReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

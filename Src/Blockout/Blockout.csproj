@@ -1,0 +1,629 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{24B7D6C0-0ED3-4689-9846-078BFAF5BDC2}</ProjectGuid>
+    <OutputType>AppContainerExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Blockout</RootNamespace>
+    <AssemblyName>Blockout</AssemblyName>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+    <TargetPlatformVersion>10.0.19041.0</TargetPlatformVersion>
+    <TargetPlatformMinVersion>10.0.10240.0</TargetPlatformMinVersion>
+    <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+    <EnableDotNetNativeCompatibleProfile>true</EnableDotNetNativeCompatibleProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PackageCertificateKeyFile>Blockout_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <MonoGamePlatform>WindowsStoreApp</MonoGamePlatform>
+    <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
+    <AppxBundle>Always</AppxBundle>
+    <AppxBundlePlatforms>arm</AppxBundlePlatforms>
+    <PackageCertificateThumbprint>ED954B95C08FD6117DC195C6ADCF961357941FB0</PackageCertificateThumbprint>
+    <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
+    <AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
+    <LangVersion>latest</LangVersion>
+    <GenerateAppInstallerFile>False</GenerateAppInstallerFile>
+    <AppxPackageSigningTimestampDigestAlgorithm>SHA256</AppxPackageSigningTimestampDigestAlgorithm>
+    <AppxSymbolPackageEnabled>False</AppxSymbolPackageEnabled>
+    <GenerateTestArtifacts>True</GenerateTestArtifacts>
+    <HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\WindowsUniversal\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UAP</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <OutputPath>bin\WindowsUniversal\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UAP</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>ARM</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\WindowsUniversal\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NETFX_CORE;WINDOWS_UAP;CODE_ANALYSIS;AUDIO;SHADER_EFFECTS</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\WindowsUniversal\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UAP;CODE_ANALYSIS;AUDIO;SHADER_EFFECTS</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\WindowsUniversal\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;NETFX_CORE;WINDOWS_UAP;CODE_ANALYSIS;AUDIO;CODE_ANALYSIS;CODE_ANALYSIS;SHADER_EFFECTS</DefineConstants>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\WindowsUniversal\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UAP;CODE_ANALYSIS;SHADER_EFFECTS;AUDIO</DefineConstants>
+    <Optimize>true</Optimize>
+    <NoWarn>;2008</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BlockoutRt\Common\BindableBase.cs" />
+    <Compile Include="BlockoutRt\Common\BooleanNegationConverter.cs" />
+    <Compile Include="BlockoutRt\Common\BooleanToVisibilityConverter.cs" />
+    <Compile Include="BlockoutRt\Common\LayoutAwarePage.cs" />
+    <Compile Include="BlockoutRt\Common\RichTextColumns.cs" />
+    <Compile Include="BlockoutRt\Common\SuspensionManagerException.cs" />
+    <Compile Include="Blockout\Achievement.cs" />
+    <Compile Include="Blockout\AchievementHighscore.cs" />
+    <Compile Include="Blockout\AchievementManager.cs" />
+    <Compile Include="Blockout\AchievementProperties.cs" />
+    <Compile Include="Blockout\AchievementsScreen.cs" />
+    <Compile Include="Blockout\AchievementTracker.cs" />
+    <Compile Include="Blockout\ActionContext.cs" />
+    <Compile Include="Blockout\ActivatorAttribute.cs" />
+    <Compile Include="Blockout\ActivatorFactory.cs" />
+    <Compile Include="Blockout\ActivatorManager.cs" />
+    <Compile Include="Blockout\ActivatorOptions.cs" />
+    <Compile Include="Blockout\ActivityInvoker.cs" />
+    <Compile Include="Blockout\ActivityProvider.cs" />
+    <Compile Include="Blockout\ActivityQueue.cs" />
+    <Compile Include="Blockout\ActivitySet.cs" />
+    <Compile Include="Blockout\AddinConverter.cs" />
+    <Compile Include="Blockout\AddinInfo.cs" />
+    <Compile Include="Blockout\AddinList.cs" />
+    <Compile Include="Blockout\AssemblyContext.cs" />
+    <Compile Include="Blockout\AssemblyInfoAttribute.cs" />
+    <Compile Include="Blockout\AssemblyType.cs" />
+    <Compile Include="Blockout\AssistantAttribute.cs" />
+    <Compile Include="Blockout\Background.cs" />
+    <Compile Include="Blockout\BackgroundCounter.cs" />
+    <Compile Include="Blockout\BackgroundMovingObject.cs" />
+    <Compile Include="Blockout\BackgroundObjects.cs" />
+    <Compile Include="Blockout\Block.cs" />
+    <Compile Include="Blockout\BlockMovement.cs" />
+    <Compile Include="Blockout\BlockMovementDirection.cs" />
+    <Compile Include="Blockout\BlockTypes.cs" />
+    <Compile Include="Blockout\BookmarkManager.cs" />
+    <Compile Include="Blockout\BuilderDictionary.cs" />
+    <Compile Include="Blockout\BuilderFactory.cs" />
+    <Compile Include="Blockout\BuilderProvider.cs" />
+    <Compile Include="Blockout\ClientSerializer.cs" />
+    <Compile Include="Blockout\ClientTree.cs" />
+    <Compile Include="Blockout\ComponentDictionary.cs" />
+    <Compile Include="Blockout\ConfigConverter.cs" />
+    <Compile Include="Blockout\ConfigDictionary.cs" />
+    <Compile Include="Blockout\ConfigProvider.cs" />
+    <Compile Include="Blockout\ConfigService.cs" />
+    <Compile Include="Blockout\ConnectionContext.cs" />
+    <Compile Include="Blockout\ConnectionInvoker.cs" />
+    <Compile Include="Blockout\ContextList.cs" />
+    <Compile Include="Blockout\ContextSettings.cs" />
+    <Compile Include="Blockout\ContextTree.cs" />
+    <Compile Include="Blockout\ControlLayout.cs" />
+    <Compile Include="Blockout\DatabaseLoader.cs" />
+    <Compile Include="Blockout\DatabaseTree.cs" />
+    <Compile Include="Blockout\DatabaseType.cs" />
+    <Compile Include="Blockout\DeploymentSite.cs" />
+    <Compile Include="Blockout\DeviceQueue.cs" />
+    <Compile Include="Blockout\DialogContext.cs" />
+    <Compile Include="Blockout\DialogStream.cs" />
+    <Compile Include="Blockout\DirectoryContext.cs" />
+    <Compile Include="Blockout\DirectoryHelper.cs" />
+    <Compile Include="Blockout\DiskEventArgs.cs" />
+    <Compile Include="Blockout\DiskSerializer.cs" />
+    <Compile Include="Blockout\DockingPane.cs" />
+    <Compile Include="Blockout\DockingPaneEditor.cs" />
+    <Compile Include="Blockout\DockingPaneService.cs" />
+    <Compile Include="Blockout\DomainStack.cs" />
+    <Compile Include="Blockout\DomainTree.cs" />
+    <Compile Include="Blockout\DriveConverter.cs" />
+    <Compile Include="Blockout\DriveService.cs" />
+    <Compile Include="Blockout\DriveStream.cs" />
+    <Compile Include="Blockout\EditorType.cs" />
+    <Compile Include="Blockout\ElementGenerator.cs" />
+    <Compile Include="Blockout\EmulatorFactory.cs" />
+    <Compile Include="Blockout\EmulatorToken.cs" />
+    <Compile Include="Blockout\EnemyBigBase.cs" />
+    <Compile Include="Blockout\EnemyManager.cs" />
+    <Compile Include="Blockout\EnemyPointsVisual.cs" />
+    <Compile Include="Blockout\FadeState.cs" />
+    <Compile Include="Blockout\FileLoader.cs" />
+    <Compile Include="Blockout\FileScope.cs" />
+    <Compile Include="Blockout\FileSet.cs" />
+    <Compile Include="Blockout\FormConverter.cs" />
+    <Compile Include="Blockout\FunctionLoader.cs" />
+    <Compile Include="Blockout\Game1.cs" />
+    <Compile Include="Blockout\GameGenerator.cs" />
+    <Compile Include="Blockout\GameLevel.cs" />
+    <Compile Include="Blockout\GameplayScreen.cs" />
+    <Compile Include="Blockout\GroupSet.cs" />
+    <Compile Include="Blockout\Gui.cs" />
+    <Compile Include="Blockout\IconSet.cs" />
+    <Compile Include="Blockout\ImageAttribute.cs" />
+    <Compile Include="Blockout\ImageScope.cs" />
+    <Compile Include="Blockout\ImageStream.cs" />
+    <Compile Include="Blockout\MemoryEventArgs.cs" />
+    <Compile Include="Blockout\MenuCollection.cs" />
+    <Compile Include="Blockout\MenuInvoker.cs" />
+    <Compile Include="Blockout\MenuItemDesigner.cs" />
+    <Compile Include="Blockout\MenuTable.cs" />
+    <Compile Include="Blockout\MenuToken.cs" />
+    <Compile Include="Blockout\NetworkDesigner.cs" />
+    <Compile Include="Blockout\NetworkEditor.cs" />
+    <Compile Include="Blockout\NetworkProvider.cs" />
+    <Compile Include="Blockout\NetworkQueue.cs" />
+    <Compile Include="Blockout\NodeOptions.cs" />
+    <Compile Include="Blockout\OptionsFactory.cs" />
+    <Compile Include="Blockout\PackageProvider.cs" />
+    <Compile Include="Blockout\PageOptions.cs" />
+    <Compile Include="Blockout\PaneService.cs" />
+    <Compile Include="Blockout\PartitionHelper.cs" />
+    <Compile Include="Blockout\PartitionService.cs" />
+    <Compile Include="Blockout\PathDesigner.cs" />
+    <Compile Include="Blockout\PcitureQueue.cs" />
+    <Compile Include="Blockout\PcitureSite.cs" />
+    <Compile Include="Blockout\Player.cs" />
+    <Compile Include="Blockout\PluginFactory.cs" />
+    <Compile Include="Blockout\PredefinedLevels.cs" />
+    <Compile Include="Blockout\ProcessCollection.cs" />
+    <Compile Include="Blockout\ProcessFactory.cs" />
+    <Compile Include="Blockout\ProcessResolver.cs" />
+    <Compile Include="Blockout\ProcessStack.cs" />
+    <Compile Include="Blockout\ProjectInvoker.cs" />
+    <Compile Include="Blockout\ProjectService.cs" />
+    <Compile Include="Blockout\ProjectToken.cs" />
+    <Compile Include="Blockout\PuzzlePacksScreen.cs" />
+    <Compile Include="Blockout\PuzzleScreen.cs" />
+    <Compile Include="Blockout\QueueLayout.cs" />
+    <Compile Include="Blockout\QueueResolver.cs" />
+    <Compile Include="Blockout\QueueSettings.cs" />
+    <Compile Include="Blockout\QueueStack.cs" />
+    <Compile Include="Blockout\ReferenceHelper.cs" />
+    <Compile Include="Blockout\ReferenceOptions.cs" />
+    <Compile Include="Blockout\ReferenceSet.cs" />
+    <Compile Include="Blockout\ServerInvoker.cs" />
+    <Compile Include="Blockout\ServerResolver.cs" />
+    <Compile Include="Blockout\SettingsRt.cs" />
+    <Compile Include="Blockout\SolutionAttribute.cs" />
+    <Compile Include="Blockout\SolutionDictionary.cs" />
+    <Compile Include="Blockout\StoreCollection.cs" />
+    <Compile Include="Blockout\StoreList.cs" />
+    <Compile Include="Blockout\StoreManager.cs" />
+    <Compile Include="Blockout\StoreTable.cs" />
+    <Compile Include="Blockout\StoreToken.cs" />
+    <Compile Include="Blockout\Stream.cs" />
+    <Compile Include="Blockout\StreamManager.cs" />
+    <Compile Include="Blockout\StubSerializer.cs" />
+    <Compile Include="Blockout\SymbolContext.cs" />
+    <Compile Include="Blockout\SymbolEditor.cs" />
+    <Compile Include="Blockout\SymbolStack.cs" />
+    <Compile Include="Blockout\TemplateCollection.cs" />
+    <Compile Include="Blockout\TextFileSettings.cs" />
+    <Compile Include="Blockout\ToolboxCollection.cs" />
+    <Compile Include="Blockout\ToolboxDictionary.cs" />
+    <Compile Include="Blockout\ToolboxEventArgs.cs" />
+    <Compile Include="Blockout\TreeNodeAttribute.cs" />
+    <Compile Include="Blockout\TreeNodeContext.cs" />
+    <Compile Include="Blockout\TreeNodeSerializer.cs" />
+    <Compile Include="Blockout\TreeNodeTree.cs" />
+    <Compile Include="Blockout\UpgradeMenuScreen.cs" />
+    <Compile Include="Blockout\ViewInvoker.cs" />
+    <Compile Include="Blockout\WindowLayout.cs" />
+    <Compile Include="Blockout\WindowTable.cs" />
+    <Compile Include="Blockout\XmlFileContext.cs" />
+    <Compile Include="Bounds.cs" />
+    <Compile Include="ChallangeBlock.cs" />
+    <Compile Include="GameBase.cs" />
+    <Compile Include="GameInstance.cs" />
+    <Compile Include="GamePage.xaml.cs">
+      <DependentUpon>GamePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GameplayScreenBase.cs" />
+    <Compile Include="GameScreen.cs" />
+    <Compile Include="GameSettings.cs" />
+    <Compile Include="InputState.cs" />
+    <Compile Include="LocalHighScoreHard.cs" />
+    <Compile Include="MenuScreen.cs" />
+    <Compile Include="PlatformEncryption.cs" />
+    <Compile Include="PlatformInheritBase.cs" />
+    <Compile Include="PlatformLocalStorage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RandomManager.cs" />
+    <Compile Include="ScoreInstance.cs" />
+    <Compile Include="Scores.cs" />
+    <Compile Include="ScreenManager.cs" />
+    <Compile Include="ScreensInstance.cs" />
+    <Compile Include="Shared\IElement.cs" />
+    <Compile Include="Shared\IElementGenerator.cs" />
+    <Compile Include="SoundFx.cs" />
+    <Compile Include="Strings\Strings.Designer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <PRIResource Include="Strings\Strings.resw" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\LargeTile.scale-100.png" />
+    <Content Include="Assets\LargeTile.scale-125.png" />
+    <Content Include="Assets\LargeTile.scale-150.png" />
+    <Content Include="Assets\LargeTile.scale-200.png" />
+    <Content Include="Assets\LargeTile.scale-400.png" />
+    <Content Include="Assets\LockScreenLogo.scale-100.png" />
+    <Content Include="Assets\LockScreenLogo.scale-125.png" />
+    <Content Include="Assets\LockScreenLogo.scale-150.png" />
+    <Content Include="Assets\LockScreenLogo.scale-400.png" />
+    <Content Include="Assets\Logo.scale-100.png" />
+    <Content Include="Assets\Logo.scale-140.png" />
+    <Content Include="Assets\Logo.scale-180.png" />
+    <Content Include="Assets\Logo.scale-80.png" />
+    <Content Include="Assets\SmallLogo.png" />
+    <Content Include="Assets\SmallLogo.scale-200.png" />
+    <Content Include="Assets\SmallTile.scale-100.png" />
+    <Content Include="Assets\SmallTile.scale-125.png" />
+    <Content Include="Assets\SmallTile.scale-150.png" />
+    <Content Include="Assets\SmallTile.scale-200.png" />
+    <Content Include="Assets\SmallTile.scale-400.png" />
+    <Content Include="Assets\SplashScreen.scale-100.png" />
+    <Content Include="Assets\SplashScreen.scale-125.png" />
+    <Content Include="Assets\SplashScreen.scale-140.png" />
+    <Content Include="Assets\SplashScreen.scale-150.png" />
+    <Content Include="Assets\SplashScreen.scale-180.png" />
+    <Content Include="Assets\SplashScreen.scale-400.png" />
+    <Content Include="Assets\Square150x150Logo.scale-100.png" />
+    <Content Include="Assets\Square150x150Logo.scale-125.png" />
+    <Content Include="Assets\Square150x150Logo.scale-150.png" />
+    <Content Include="Assets\Square150x150Logo.scale-400.png" />
+    <Content Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-16.png" />
+    <Content Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-24.png" />
+    <Content Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-256.png" />
+    <Content Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-32.png" />
+    <Content Include="Assets\Square44x44Logo.altform-lightunplated_targetsize-48.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-16.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-256.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-32.png" />
+    <Content Include="Assets\Square44x44Logo.altform-unplated_targetsize-48.png" />
+    <Content Include="Assets\Square44x44Logo.scale-100.png" />
+    <Content Include="Assets\Square44x44Logo.scale-125.png" />
+    <Content Include="Assets\Square44x44Logo.scale-150.png" />
+    <Content Include="Assets\Square44x44Logo.scale-400.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-16.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-256.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-32.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-48.png" />
+    <Content Include="Assets\StoreLogo.scale-100.png" />
+    <Content Include="Assets\StoreLogo.scale-125.png" />
+    <Content Include="Assets\StoreLogo.scale-140.png" />
+    <Content Include="Assets\StoreLogo.scale-150.png" />
+    <Content Include="Assets\StoreLogo.scale-180.png" />
+    <Content Include="Assets\StoreLogo.scale-200.png" />
+    <Content Include="Assets\StoreLogo.scale-400.png" />
+    <Content Include="Assets\WideTile.scale-100.png" />
+    <Content Include="Assets\WideTile.scale-125.png" />
+    <Content Include="Assets\WideTile.scale-150.png" />
+    <Content Include="Assets\WideTile.scale-200.png" />
+    <Content Include="Assets\WideTile.scale-400.png" />
+    <Content Include="Generated\01kids.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Generated\01kids.txt-filtered.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Generated\02easy.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Generated\02easy.txt-filtered.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Generated\03medium 2048 solved.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Generated\03medium 2048 solved.txt-filtered.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Generated\04Hard.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Generated\04Hard.txt-filtered.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Generated\05expert.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Generated\05expert.txt-filtered.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Generated\06Crazy.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Generated\06Crazy.txt-filtered.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Properties\Default.rd.xml" />
+    <Content Include="Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Page Include="GamePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Blockout_TemporaryKey.pfx" />
+    <Content Include="Content\Font\infoTextFont.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Font\menuFont.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Font\TramyadBoldNumbers.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Font\TramyadBoldText.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\BackgroundSnapped.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\Background\BackgroundMarmor.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\Background\black.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\Background\BorderRaster.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\Background\Top.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\Background\white.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\Block\Block2H0.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\Block\Block2H1.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\Block\Block2H2.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\Block\Block2H3.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\Block\Block2V0.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\Block\Block2V1.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\Block\Block2V2.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\Block\Block2V3.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\Block\Block3H0.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\Block\Block3H1.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\Block\Block3H2.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\Block\Block3H3.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\Block\Block3V0.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\Block\Block3V1.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\Block\Block3V2.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\Block\Block3V3.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\Block\Level.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\Block\Player0.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\Block\Player1.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\Block\Player2.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\credits.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\Ground\GroundBase1x1.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\Ground\Wall1x1.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\Gui\bestSolutionBack.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\Gui\bestSolutionBackGold.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\Gui\bestSolutionBackSilver.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\Gui\IconHome.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\Gui\IconPuzzle.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\Gui\IconRestart.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\Gui\IconUndo.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\Gui\Left.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\Gui\live.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\Gui\Right.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\howToPlay.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\loading.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\Menu\buttonAlternative.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\Menu\buttonHelp.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\Menu\buttonNormal.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\Menu\buttonPlay.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\Menu\MenuBackground.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\Menu\MenuBackgroundSimple.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\Menu\slider.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\Menu\sliderBack.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\name.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\Pixel\black.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\Pixel\blank.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\Graphic\Pixel\grayLayer.xnb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Content\Sound\blop.xnb" />
+    <None Include="Content\Sound\blopDeep.xnb" />
+    <None Include="Content\Sound\blopHigh.xnb" />
+    <None Include="Content\Sound\ClickButton.xnb" />
+    <None Include="Content\Sound\clong.xnb" />
+    <None Include="Content\Sound\drag.xnb" />
+    <Content Include="Content\Sound\GameSound0.wma" />
+    <None Include="Content\Sound\GameSound0.xnb" />
+    <Content Include="Content\Sound\MenuSound0.wma" />
+    <None Include="Content\Sound\MenuSound0.xnb" />
+    <None Include="Content\Sound\Pickup.xnb" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.2.8</Version>
+    </PackageReference>
+    <PackageReference Include="MonoGame.Framework.WindowsUniversal">
+      <Version>3.7.1.189</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.3</Version>
+    </PackageReference>
+  </ItemGroup>
+  <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+    <VisualStudioVersion>14.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
+  <!--Import Project="$(MSBuildExtensionsPath)\MonoGame\v4.0\MonoGame.Content.Builder.targets" /-->
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
